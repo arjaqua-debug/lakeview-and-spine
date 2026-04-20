@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Replace https://lakeviewspinewellness.com with your actual domain -->
+
+  <url><loc>https://lakeviewspinewellness.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://lakeviewspinewellness.com/services/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://lakeviewspinewellness.com/new-patients/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://lakeviewspinewellness.com/book/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://lakeviewspinewellness.com/about/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lakeviewspinewellness.com/packages/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lakeviewspinewellness.com/contact/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lakeviewspinewellness.com/faq/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://lakeviewspinewellness.com/blog/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://lakeviewspinewellness.com/blog/workstation-habits-neck-tension/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://lakeviewspinewellness.com/blog/first-chiropractic-visit/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://lakeviewspinewellness.com/blog/when-tension-needs-attention/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://lakeviewspinewellness.com/blog/recovery-habits-active-adults/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://lakeviewspinewellness.com/insurance/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://lakeviewspinewellness.com/new-patient-forms/</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lakeviewspinewellness.com/privacy/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

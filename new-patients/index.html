@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lakeview Spine &amp; Wellness - New Patients</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#474743",
+                        "surface-container-high": "#e8e8e6",
+                        "primary": "#316357",
+                        "on-surface-variant": "#404946",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#e5e2dd",
+                        "on-primary-fixed": "#00201a",
+                        "on-secondary-fixed": "#1b1c17",
+                        "primary-fixed": "#b8edde",
+                        "on-surface": "#1a1c1b",
+                        "surface-dim": "#dadad8",
+                        "surface-container-highest": "#e2e3e1",
+                        "background": "#f9f9f7",
+                        "inverse-surface": "#2f3130",
+                        "secondary-container": "#e4e3db",
+                        "on-background": "#1a1c1b",
+                        "on-tertiary-fixed": "#1c1c19",
+                        "on-tertiary-container": "#fdfaf5",
+                        "on-secondary-container": "#65655e",
+                        "on-secondary": "#ffffff",
+                        "outline": "#707975",
+                        "on-primary-container": "#e7fff6",
+                        "outline-variant": "#c0c8c4",
+                        "on-primary-fixed-variant": "#1b4f44",
+                        "on-secondary-fixed-variant": "#474741",
+                        "inverse-on-surface": "#f1f1ef",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#74736f",
+                        "surface-bright": "#f9f9f7",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "secondary": "#5f5f59",
+                        "surface-tint": "#35675b",
+                        "surface-container-low": "#f4f4f2",
+                        "tertiary-fixed-dim": "#c9c6c1",
+                        "secondary-fixed-dim": "#c8c7bf",
+                        "tertiary": "#5b5a57",
+                        "inverse-primary": "#9dd1c2",
+                        "surface-container": "#eeeeec",
+                        "primary-fixed-dim": "#9dd1c2",
+                        "on-primary": "#ffffff",
+                        "surface": "#f9f9f7",
+                        "secondary-fixed": "#e4e3db",
+                        "primary-container": "#4a7c6f",
+                        "surface-variant": "#e2e3e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem", // Updated based on design system components
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .glass-panel {
+                @apply bg-primary-container/80 backdrop-blur-[12px];
+            }
+            .ambient-shadow {
+                @apply shadow-[0_32px_64px_rgba(26,28,27,0.05)];
+            }
+            .text-display-lg {
+                @apply text-[3.5rem] leading-[1.1] tracking-[-0.02em] font-headline font-semibold;
+            }
+            .text-headline-lg {
+                @apply text-4xl leading-tight font-headline font-medium;
+            }
+            .text-body-lg {
+                @apply text-[17px] leading-[1.6] font-body font-normal;
+            }
+            .text-label-md {
+                @apply text-[0.75rem] uppercase tracking-[0.05em] font-label font-bold text-secondary;
+            }
+            .btn-primary {
+                @apply bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded font-label font-medium transition-all duration-300 hover:shadow-[0_4px_12px_rgba(26,28,27,0.1)] hover:-translate-y-[2px];
+            }
+            .btn-secondary {
+                @apply bg-surface-container-highest text-primary px-8 py-4 rounded font-label font-medium transition-all duration-300 hover:bg-surface-variant;
+            }
+            .ghost-border {
+                @apply border border-outline-variant/15;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body antialiased overflow-x-hidden pt-24 selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f9f9f7]/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm shadow-[0_32px_64px_rgba(26,28,27,0.04)] transition-transform duration-200">
+<div class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto">
+<a class="text-xl font-bold tracking-tight text-[#316357] dark:text-[#4a7c6f] font-['Plus_Jakarta_Sans'] antialiased hover:opacity-80 transition-opacity" href="/">
+                Lakeview Spine &amp; Wellness
+            </a>
+<nav class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans'] antialiased">
+<a class="text-[#5f5f59] hover:text-[#316357] transition-colors duration-300" href="/">Home</a>
+<a class="text-[#5f5f59] hover:text-[#316357] transition-colors duration-300" href="/services/">Services</a>
+<a aria-current="page" class="text-[#316357] font-bold border-b-2 border-[#316357] pb-1" href="/new-patients/">New Patients</a>
+<a class="text-[#5f5f59] hover:text-[#316357] transition-colors duration-300" href="/faq/">FAQ</a>
+</nav>
+<a class="hidden md:inline-flex btn-primary hover:opacity-80 transition-opacity" href="/book/">
+                Book Appointment
+            </a>
+</div>
+</header>
+<!-- Main Content -->
+<main>
+<!-- Hero Section -->
+<section class="py-24 md:py-32 px-6 lg:px-12 max-w-7xl mx-auto bg-surface-container-low rounded-[2rem] mt-8 mb-16 ambient-shadow">
+<div class="max-w-4xl mx-auto text-center space-y-8">
+<span class="text-label-md block mb-4">Your Journey Starts Here</span>
+<h1 class="text-display-lg text-primary">Your first visit should feel like the beginning of something useful.</h1>
+<p class="text-body-lg text-secondary max-w-2xl mx-auto">We approach your health with a restorative mindset. No rush, just intentional care designed to uncover the root of your discomfort and build a sustainable path forward.</p>
+</div>
+</section>
+<!-- What Happens: The Wellness Timeline -->
+<section class="py-24 px-6 lg:px-12 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16 text-center">
+<h2 class="text-headline-lg text-on-surface">What to Expect</h2>
+<p class="text-body-lg text-secondary mt-4">A deliberate, unhurried assessment.</p>
+</div>
+<div class="max-w-3xl mx-auto relative before:absolute before:inset-0 before:ml-6 md:before:ml-[50%] before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-surface-container-highest">
+<!-- Step 1 -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active mb-16">
+<div class="flex items-center justify-center w-12 h-12 rounded-full border-[6px] border-surface bg-primary text-on-primary shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-[0_0_0_4px_rgba(49,99,87,0.1)] z-10 font-bold">1</div>
+<div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-surface-container-lowest p-8 rounded-2xl ambient-shadow ghost-border ml-6 md:ml-0 hover:-translate-y-1 transition-transform duration-300">
+<h3 class="font-headline text-xl text-primary mb-3">Intake and History</h3>
+<p class="text-body-lg text-secondary">We begin by listening. Understanding your history, lifestyle, and specific concerns is crucial before any physical assessment begins.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active mb-16">
+<div class="flex items-center justify-center w-12 h-12 rounded-full border-[6px] border-surface bg-primary-fixed text-on-primary-fixed shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold">2</div>
+<div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-surface-container-lowest p-8 rounded-2xl ambient-shadow ghost-border ml-6 md:ml-0 hover:-translate-y-1 transition-transform duration-300">
+<h3 class="font-headline text-xl text-primary mb-3">Movement and Assessment</h3>
+<p class="text-body-lg text-secondary">A comprehensive evaluation of your mobility, strength, and structural alignment to pinpoint areas requiring attention.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active mb-16">
+<div class="flex items-center justify-center w-12 h-12 rounded-full border-[6px] border-surface bg-primary-fixed text-on-primary-fixed shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold">3</div>
+<div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-surface-container-lowest p-8 rounded-2xl ambient-shadow ghost-border ml-6 md:ml-0 hover:-translate-y-1 transition-transform duration-300">
+<h3 class="font-headline text-xl text-primary mb-3">Findings and Recommendations</h3>
+<p class="text-body-lg text-secondary">We review what we've discovered together, translating clinical findings into understandable, actionable insights.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+<div class="flex items-center justify-center w-12 h-12 rounded-full border-[6px] border-surface bg-primary-fixed text-on-primary-fixed shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold">4</div>
+<div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-surface-container-lowest p-8 rounded-2xl ambient-shadow ghost-border ml-6 md:ml-0 hover:-translate-y-1 transition-transform duration-300">
+<h3 class="font-headline text-xl text-primary mb-3">Next Steps</h3>
+<p class="text-body-lg text-secondary">Collaboratively, we design a restorative care plan tailored to your specific goals, ensuring you leave with clarity.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- What to Bring -->
+<section class="py-24 px-6 lg:px-12 bg-surface-container-low">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+<div class="w-full lg:w-1/2 lg:-ml-8 order-2 lg:order-1">
+<span class="text-label-md mb-4 block">Preparation</span>
+<h2 class="text-headline-lg text-on-surface mb-8">What to Bring</h2>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">badge</span>
+<div>
+<h4 class="font-headline font-semibold text-on-surface">Valid Photo ID</h4>
+<p class="text-body-lg text-secondary">Driver's license or state-issued ID.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+<div>
+<h4 class="font-headline font-semibold text-on-surface">Insurance Information</h4>
+<p class="text-body-lg text-secondary">Physical card and any relevant referral documents.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">directions_run</span>
+<div>
+<h4 class="font-headline font-semibold text-on-surface">Comfortable Clothing</h4>
+<p class="text-body-lg text-secondary">Loose-fitting attire that allows for a full range of motion during your assessment.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">medical_information</span>
+<div>
+<h4 class="font-headline font-semibold text-on-surface">Recent Imaging</h4>
+<p class="text-body-lg text-secondary">Any X-rays, MRIs, or reports relevant to your condition (if applicable).</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="w-full lg:w-1/2 order-1 lg:order-2">
+<div class="relative rounded-[2rem] overflow-hidden aspect-[4/5] ambient-shadow">
+<img alt="Patient preparing for appointment" class="w-full h-full object-cover" data-alt="Softly lit waiting area in a high-end wellness clinic with natural wood textures, neutral tones, and a comfortable linen chair" src="/images/HOME-NEWPATIENT-01.png"/>
+<!-- Tonal overlay for soft contrast -->
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Band -->
+<section class="w-full bg-primary-container py-24 px-6 lg:px-12 text-center relative overflow-hidden">
+<!-- Abstract background elements to replace flat hex -->
+<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary to-primary-container opacity-50 z-0"></div>
+<div class="relative z-10 max-w-3xl mx-auto space-y-8">
+<h2 class="text-headline-lg text-on-primary">Ready to book your first visit?</h2>
+<a class="inline-block bg-surface-container-lowest text-primary px-8 py-4 rounded font-label font-bold tracking-wider hover:bg-surface-container-high transition-colors ambient-shadow" href="/">
+                    Book Your New Patient Exam
+                </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6 bg-[#f4f4f2] dark:bg-stone-950 border-t border-stone-200/20 text-sm font-['Plus_Jakarta_Sans'] leading-relaxed transition-colors duration-300 mt-auto">
+<div class="font-bold text-[#316357]">
+            © 2024 Lakeview Spine &amp; Wellness. A Restorative Studio.
+        </div>
+<nav class="flex gap-6">
+<a class="text-[#5f5f59] hover:text-[#316357] transition-colors" href="/privacy/">Privacy Policy</a>
+<a class="text-[#5f5f59] hover:text-[#316357] transition-colors" href="/contact/">Contact Us</a>
+</nav>
+</footer>
+<!-- Bottom Nav Bar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[92%] max-w-md flex justify-around items-center p-2 z-50 bg-[#4a7c6f]/90 dark:bg-[#316357]/90 backdrop-blur-xl rounded-2xl shadow-[0_32px_64px_rgba(26,28,27,0.06)]">
+<a class="flex flex-col items-center text-white/70 px-4 py-2 hover:bg-white/10 transition-all rounded-xl" href="/">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="text-[10px] uppercase tracking-widest font-medium font-['Plus_Jakarta_Sans']">Home</span>
+</a>
+<a class="flex flex-col items-center text-white/70 px-4 py-2 hover:bg-white/10 transition-all rounded-xl" href="/services/">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">rebase_edit</span>
+<span class="text-[10px] uppercase tracking-widest font-medium font-['Plus_Jakarta_Sans']">Treatments</span>
+</a>
+<a class="flex flex-col items-center bg-white/20 text-white rounded-xl px-4 py-2 scale-95 duration-150" href="/">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">person_add</span>
+<span class="text-[10px] uppercase tracking-widest font-medium font-['Plus_Jakarta_Sans']">Patients</span>
+</a>
+<a class="flex flex-col items-center text-white/70 px-4 py-2 hover:bg-white/10 transition-all rounded-xl" href="/">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+<span class="text-[10px] uppercase tracking-widest font-medium font-['Plus_Jakarta_Sans']">Profile</span>
+</a>
+</nav>
+</body></html>

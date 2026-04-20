@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FAQ - Lakeview Spine &amp; Wellness</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e5e2dd",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#9dd1c2",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#e4e3db",
+                    "primary-container": "#4a7c6f",
+                    "secondary-fixed": "#e4e3db",
+                    "inverse-on-surface": "#f1f1ef",
+                    "tertiary-fixed-dim": "#c9c6c1",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#b8edde",
+                    "outline-variant": "#c0c8c4",
+                    "on-secondary-fixed": "#1b1c17",
+                    "tertiary-container": "#74736f",
+                    "on-tertiary-container": "#fdfaf5",
+                    "surface-container-low": "#f4f4f2",
+                    "surface-container": "#eeeeec",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#35675b",
+                    "on-secondary-fixed-variant": "#474741",
+                    "on-secondary-container": "#65655e",
+                    "surface-container-highest": "#e2e3e1",
+                    "on-surface": "#1a1c1b",
+                    "surface-variant": "#e2e3e1",
+                    "on-primary-fixed-variant": "#1b4f44",
+                    "surface-bright": "#f9f9f7",
+                    "background": "#f9f9f7",
+                    "outline": "#707975",
+                    "inverse-primary": "#9dd1c2",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#404946",
+                    "secondary": "#5f5f59",
+                    "on-primary-fixed": "#00201a",
+                    "surface-container-high": "#e8e8e6",
+                    "on-tertiary-fixed": "#1c1c19",
+                    "primary": "#316357",
+                    "surface": "#f9f9f7",
+                    "inverse-surface": "#2f3130",
+                    "secondary-fixed-dim": "#c8c7bf",
+                    "surface-dim": "#dadad8",
+                    "on-primary-container": "#e7fff6",
+                    "on-error": "#ffffff",
+                    "on-background": "#1a1c1b",
+                    "tertiary": "#5b5a57",
+                    "on-tertiary-fixed-variant": "#474743"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "label": [
+                            "Plus Jakarta Sans"
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-xl no-border tonal-transition-bg shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none font-['Plus_Jakarta_Sans'] text-base tracking-tight">
+<div class="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto">
+<a class="text-xl font-bold tracking-tighter text-emerald-900 dark:text-emerald-500 hover:opacity-80 transition-all duration-300" href="/">Lakeview Spine &amp; Wellness</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-300 hover:opacity-80 transition-all duration-300" href="/services/">Treatments</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-300 hover:opacity-80 transition-all duration-300" href="/about/">About Us</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-300 hover:opacity-80 transition-all duration-300" href="/services/">Patient Care</a>
+<a class="text-emerald-800 dark:text-emerald-300 font-bold border-b-2 border-emerald-800 dark:border-emerald-300 pb-1 hover:opacity-80 transition-all duration-300 transform translate-y-0.5 duration-150" href="/faq/">FAQ</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-300 hover:opacity-80 transition-all duration-300" href="/contact/">Contact</a>
+</div>
+<a class="hidden md:inline-flex items-center justify-center bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded hover:opacity-90 transition-all shadow-[0_4px_14px_0_rgb(0,0,0,0.1)]" href="/book/">
+                Book Appointment
+            </a>
+<button class="md:hidden text-emerald-900 dark:text-emerald-400">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="flex-grow pt-24">
+<!-- Page Header -->
+<section class="bg-surface-container-low pt-24 pb-20 px-6 md:px-8">
+<div class="max-w-4xl mx-auto text-center space-y-6">
+<span class="text-sm font-bold text-primary tracking-widest uppercase font-label">FAQ</span>
+<h1 class="text-[2.5rem] md:text-[3.5rem] font-headline font-semibold text-on-surface leading-tight tracking-tight max-w-3xl mx-auto">
+                    Questions patients ask before their first visit — and during care.
+                </h1>
+<p class="text-[17px] leading-[1.6] text-secondary max-w-2xl mx-auto font-body">
+                    If you do not find what you are looking for, call us at (616) 555-0192 or send a message from our contact page.
+                </p>
+</div>
+</section>
+<!-- FAQ Accordion Section -->
+<section class="bg-background py-24 px-6 md:px-8">
+<div class="max-w-[760px] mx-auto space-y-16">
+<!-- Group: Before Your First Visit -->
+<div>
+<h2 class="text-xs uppercase text-primary tracking-[0.05em] font-semibold mb-6">Before Your First Visit</h2>
+<div class="space-y-4">
+<!-- Item 1 -->
+<details class="group border-b border-outline-variant/30 pb-4">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline text-lg text-on-surface py-2 hover:text-primary transition-colors">
+<span>Do I need a medical referral?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 pb-2 text-[17px] leading-[1.6] text-secondary font-body">
+                                In most cases, no. Michigan allows direct access to chiropractic care without a referral from a primary care physician. However, some specific insurance plans might require one, which we can verify for you during booking.
+                            </div>
+</details>
+<!-- Item 2 -->
+<details class="group border-b border-outline-variant/30 pb-4">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline text-lg text-on-surface py-2 hover:text-primary transition-colors">
+<span>Will an adjustment hurt if I'm already in pain?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 pb-2 text-[17px] leading-[1.6] text-secondary font-body">
+                                Adjustments are generally comfortable. If you are in acute pain, we modify our techniques to be extremely gentle, often using specialized tables or instruments rather than manual force to ensure your comfort.
+                            </div>
+</details>
+<!-- Item 3 -->
+<details class="group border-b border-outline-variant/30 pb-4">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline text-lg text-on-surface py-2 hover:text-primary transition-colors">
+<span>Can you help with nerve pain like sciatica?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 pb-2 text-[17px] leading-[1.6] text-secondary font-body">
+                                Yes. Nerve pain, particularly sciatica, is often caused by spinal misalignment or disc pressure. We specialize in non-surgical decompression and targeted adjustments designed to relieve pressure on the nervous system.
+                            </div>
+</details>
+<!-- Item 4 -->
+<details class="group border-b border-outline-variant/30 pb-4">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline text-lg text-on-surface py-2 hover:text-primary transition-colors">
+<span>How long is the initial exam?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 pb-2 text-[17px] leading-[1.6] text-secondary font-body">
+                                Your first visit typically lasts 45 to 60 minutes. This allows ample time for a comprehensive consultation, physical examination, any necessary imaging, and a discussion of your preliminary findings.
+                            </div>
+</details>
+<!-- Item 5 -->
+<details class="group border-b border-outline-variant/30 pb-4">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline text-lg text-on-surface py-2 hover:text-primary transition-colors">
+<span>What should I wear to my appointment?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 pb-2 text-[17px] leading-[1.6] text-secondary font-body">
+                                Please wear loose, comfortable clothing that allows for a full range of motion. Athletic wear or casual clothing is perfectly acceptable.
+                            </div>
+</details>
+</div>
+</div>
+<!-- Group: About Care -->
+<div>
+<h2 class="text-xs uppercase text-primary tracking-[0.05em] font-semibold mb-6">About Care</h2>
+<div class="space-y-4">
+<!-- Item 1 -->
+<details class="group border-b border-outline-variant/30 pb-4">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline text-lg text-on-surface py-2 hover:text-primary transition-colors">
+<span>Am I too old/young for chiropractic care?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 pb-2 text-[17px] leading-[1.6] text-secondary font-body">
+                                Chiropractic care is safe for all ages, from infants to seniors. We tailor our approach completely based on your age, bone density, and specific health conditions.
+                            </div>
+</details>
+<!-- Item 2 -->
+<details class="group border-b border-outline-variant/30 pb-4">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline text-lg text-on-surface py-2 hover:text-primary transition-colors">
+<span>Will I have to keep coming back forever?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 pb-2 text-[17px] leading-[1.6] text-secondary font-body">
+                                No. Our goal is always to get you out of pain and stable as efficiently as possible. While many patients choose occasional maintenance care to prevent future issues, the decision to continue care is always yours.
+                            </div>
+</details>
+<!-- Item 3 -->
+<details class="group border-b border-outline-variant/30 pb-4">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline text-lg text-on-surface py-2 hover:text-primary transition-colors">
+<span>Why do I feel sore after an adjustment?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 pb-2 text-[17px] leading-[1.6] text-secondary font-body">
+                                Mild soreness is common, similar to how you might feel after a new workout. This is simply your muscles and ligaments adapting to a proper, healthier alignment.
+                            </div>
+</details>
+<!-- Item 4 -->
+<details class="group border-b border-outline-variant/30 pb-4">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline text-lg text-on-surface py-2 hover:text-primary transition-colors">
+<span>Do you only treat the spine?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 pb-2 text-[17px] leading-[1.6] text-secondary font-body">
+                                While the spine is our foundation, we treat the entire musculoskeletal system. We frequently help patients with shoulder, knee, ankle, and wrist pain, as well as headaches and TMJ issues.
+                            </div>
+</details>
+<!-- Item 5 -->
+<details class="group border-b border-outline-variant/30 pb-4">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline text-lg text-on-surface py-2 hover:text-primary transition-colors">
+<span>How quickly will I see results?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 pb-2 text-[17px] leading-[1.6] text-secondary font-body">
+                                Response times vary depending on the severity and duration of the issue. Many patients report some relief after their first or second visit, while chronic conditions require a more sustained treatment plan to see lasting change.
+                            </div>
+</details>
+</div>
+</div>
+<!-- Group: Scheduling and Payments -->
+<div>
+<h2 class="text-xs uppercase text-primary tracking-[0.05em] font-semibold mb-6">Scheduling and Payments</h2>
+<div class="space-y-4">
+<!-- Item 1 -->
+<details class="group border-b border-outline-variant/30 pb-4">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline text-lg text-on-surface py-2 hover:text-primary transition-colors">
+<span>What is your cancellation policy?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 pb-2 text-[17px] leading-[1.6] text-secondary font-body">
+                                We request at least 24 hours' notice for cancellations. This allows us to offer the appointment time to another patient who may be in pain. Late cancellations may be subject to a fee.
+                            </div>
+</details>
+<!-- Item 2 -->
+<details class="group border-b border-outline-variant/30 pb-4">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline text-lg text-on-surface py-2 hover:text-primary transition-colors">
+<span>Do you accept my insurance?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 pb-2 text-[17px] leading-[1.6] text-secondary font-body">
+                                We are in-network with several major providers and offer complimentary benefits checks prior to your first appointment so there are no financial surprises.
+                            </div>
+</details>
+<!-- Item 3 -->
+<details class="group border-b border-outline-variant/30 pb-4">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline text-lg text-on-surface py-2 hover:text-primary transition-colors">
+<span>Can I use my HSA/FSA account?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 pb-2 text-[17px] leading-[1.6] text-secondary font-body">
+                                Yes, chiropractic care and related therapies are eligible expenses under most Health Savings Account (HSA) and Flexible Spending Account (FSA) plans. We can provide itemized receipts if required.
+                            </div>
+</details>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Band -->
+<section class="bg-primary-container text-on-primary py-24 px-6 md:px-8">
+<div class="max-w-4xl mx-auto text-center space-y-8">
+<h2 class="text-[28px] font-headline font-semibold">Still have a question?</h2>
+<p class="text-lg text-on-primary/90 max-w-2xl mx-auto font-body">
+                    Call us, send a message, or book your New Patient Exam — we are happy to answer questions before your first visit.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
+<a class="w-full sm:w-auto px-8 py-3.5 bg-surface-container-lowest text-primary font-medium rounded hover:bg-surface-container-low transition-colors duration-300" href="/contact/">
+                        Contact Us
+                    </a>
+<a class="w-full sm:w-auto px-8 py-3.5 border border-on-primary/30 text-on-primary font-medium rounded hover:bg-on-primary/10 transition-colors duration-300 flex items-center justify-center gap-2" href="/book/">
+                        Book Online <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-stone-200/20 bg-stone-100 dark:bg-stone-950 font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-[0.05em] tonal-shift-from-stone-50-to-stone-100 flat no-shadows">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full max-w-7xl mx-auto gap-6 opacity-90 hover:opacity-100">
+<div class="text-lg font-bold text-emerald-900 dark:text-emerald-500">
+                Lakeview Spine &amp; Wellness
+            </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-stone-500 dark:text-stone-500 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors" href="/privacy/">Privacy Policy</a>
+<a class="text-stone-500 dark:text-stone-500 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors" href="/privacy/">Terms of Service</a>
+<a class="text-stone-500 dark:text-stone-500 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors" href="/contact/">Accessibility</a>
+</div>
+<div class="text-stone-500 dark:text-stone-500 text-center md:text-right">
+                © 2024 Lakeview Spine &amp; Wellness. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

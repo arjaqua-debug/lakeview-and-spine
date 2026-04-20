@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Book Appointment - Lakeview Spine &amp; Wellness</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#1b1c17",
+                    "tertiary-container": "#74736f",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#b8edde",
+                    "outline-variant": "#c0c8c4",
+                    "surface-tint": "#35675b",
+                    "on-secondary-fixed-variant": "#474741",
+                    "on-secondary-container": "#65655e",
+                    "on-tertiary-container": "#fdfaf5",
+                    "surface-container-low": "#f4f4f2",
+                    "surface-container": "#eeeeec",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#e4e3db",
+                    "primary-container": "#4a7c6f",
+                    "tertiary-fixed": "#e5e2dd",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#9dd1c2",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f1f1ef",
+                    "tertiary-fixed-dim": "#c9c6c1",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#e4e3db",
+                    "inverse-surface": "#2f3130",
+                    "secondary-fixed-dim": "#c8c7bf",
+                    "primary": "#316357",
+                    "surface": "#f9f9f7",
+                    "on-primary-container": "#e7fff6",
+                    "on-error": "#ffffff",
+                    "on-background": "#1a1c1b",
+                    "tertiary": "#5b5a57",
+                    "on-tertiary-fixed-variant": "#474743",
+                    "surface-dim": "#dadad8",
+                    "surface-bright": "#f9f9f7",
+                    "background": "#f9f9f7",
+                    "outline": "#707975",
+                    "inverse-primary": "#9dd1c2",
+                    "surface-container-highest": "#e2e3e1",
+                    "on-surface": "#1a1c1b",
+                    "surface-variant": "#e2e3e1",
+                    "on-primary-fixed-variant": "#1b4f44",
+                    "surface-container-high": "#e8e8e6",
+                    "on-tertiary-fixed": "#1c1c19",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#404946",
+                    "secondary": "#5f5f59",
+                    "on-primary-fixed": "#00201a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "label": [
+                            "Plus Jakarta Sans"
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 shadow-[0_8px_32px_rgba(26,28,27,0.04)] bg-emerald-900/80 backdrop-blur-xl dark:bg-emerald-950/80 font-['Plus_Jakarta_Sans'] tracking-tight antialiased flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<a class="text-lg font-bold tracking-tighter text-white" href="/">Lakeview Spine &amp; Wellness</a>
+<div class="hidden md:flex space-x-8">
+<a class="text-emerald-100/80 hover:text-white transition-colors" href="/services/">Treatments</a>
+<a class="text-emerald-100/80 hover:text-white transition-colors" href="/about/">Our Team</a>
+<a class="text-white font-semibold border-b border-emerald-200/30 pb-1" href="/new-patients/">New Patients</a>
+<a class="text-emerald-100/80 hover:text-white transition-colors" href="/blog/">Journal</a>
+</div>
+<a class="hover:bg-white/10 rounded-lg transition-all duration-300 scale-95 active:scale-100 px-4 py-2 text-white dark:text-emerald-50" href="/book/">Book Online</a>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32">
+<!-- Page Header -->
+<section class="bg-background py-16 px-8 text-center max-w-3xl mx-auto">
+<h1 class="text-[40px] font-semibold text-on-surface leading-tight tracking-tight mb-4">Schedule your visit.</h1>
+<p class="text-[17px] text-secondary leading-relaxed max-w-[560px] mx-auto">
+                Whether you are beginning a new restorative journey or continuing your prescribed treatment, select the appropriate option below to find a time that fits your unhurried schedule.
+            </p>
+</section>
+<!-- Booking Widget Section -->
+<section class="bg-background px-8 pb-24">
+<div class="max-w-[900px] h-[600px] mx-auto bg-surface-container-lowest rounded-lg border-none shadow-[0_4px_32px_rgba(26,28,27,0.04)] flex items-center justify-center p-12">
+<!-- Placeholder for Acuity Embed -->
+<p class="text-outline uppercase tracking-widest text-sm font-semibold">[ Scheduling Widget Loading ]</p>
+</div>
+</section>
+<!-- Booking Guidance Section -->
+<section class="bg-surface-container-low py-16 px-8">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-2xl font-semibold text-on-surface text-center mb-12 tracking-tight">Choosing the right appointment type</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<!-- New Patients -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-[0_4px_24px_rgba(26,28,27,0.03)]">
+<h3 class="text-primary-container uppercase tracking-widest text-xs font-bold mb-6">New Patients</h3>
+<ul class="space-y-4 text-secondary text-[17px] leading-relaxed">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary-container mr-3 mt-1 text-sm">circle</span>
+                                Select "Initial Consultation &amp; Exam"
+                            </li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary-container mr-3 mt-1 text-sm">circle</span>
+                                Plan for a 60-minute comprehensive assessment
+                            </li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary-container mr-3 mt-1 text-sm">circle</span>
+                                Intake forms will be emailed upon booking
+                            </li>
+</ul>
+</div>
+<!-- Returning Patients -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-[0_4px_24px_rgba(26,28,27,0.03)]">
+<h3 class="text-primary-container uppercase tracking-widest text-xs font-bold mb-6">Returning Patients</h3>
+<ul class="space-y-4 text-secondary text-[17px] leading-relaxed">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary-container mr-3 mt-1 text-sm">circle</span>
+                                Select "Standard Adjustment" for routine care
+                            </li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary-container mr-3 mt-1 text-sm">circle</span>
+                                Choose "Extended Visit" if addressing a new issue
+                            </li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary-container mr-3 mt-1 text-sm">circle</span>
+                                Plan for 15-30 minutes based on visit type
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Phone Fallback Section -->
+<section class="bg-background py-20 px-8 text-center">
+<div class="max-w-xl mx-auto">
+<p class="text-[17px] text-secondary leading-relaxed mb-4">
+                    Prefer to speak with our studio coordinator? We are here to assist you in finding the perfect time.
+                </p>
+<a class="block text-2xl text-primary font-semibold hover:text-primary-container transition-colors mb-4" href="tel:6165550192">(616) 555-0192</a>
+<p class="text-outline text-sm uppercase tracking-widest font-semibold">
+                    Mon - Fri • 8:00 AM - 5:00 PM
+                </p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-24 bg-[#f4f4f2] dark:bg-stone-900 font-['Plus_Jakarta_Sans'] text-[13px] leading-relaxed max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-stone-200/10">
+<div>
+<span class="text-stone-900 dark:text-stone-100 font-bold uppercase tracking-widest block mb-4">Lakeview Spine &amp; Wellness</span>
+<p class="text-stone-600 dark:text-stone-400">© 2024 Lakeview Spine &amp; Wellness. A Restorative Studio.</p>
+</div>
+<div class="flex space-x-6 justify-start md:justify-end">
+<a class="text-stone-500 hover:text-emerald-800 dark:hover:text-emerald-200 underline decoration-emerald-200 underline-offset-4 transition-all duration-500 ease-out" href="/privacy/">Privacy</a>
+<a class="text-stone-500 hover:text-emerald-800 dark:hover:text-emerald-200 underline decoration-emerald-200 underline-offset-4 transition-all duration-500 ease-out" href="/privacy/">Terms</a>
+<a class="text-stone-500 hover:text-emerald-800 dark:hover:text-emerald-200 underline decoration-emerald-200 underline-offset-4 transition-all duration-500 ease-out" href="/contact/">Accessibility</a>
+</div>
+</footer>
+</body></html>

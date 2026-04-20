@@ -2,12 +2,14 @@
 
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Services - Lakeview Spine &amp; Wellness</title>
+<title>Services &amp; Pricing — Lakeview Spine &amp; Wellness, Grand Rapids MI</title>
+<meta name="description" content="Chiropractic services in Grand Rapids, MI with transparent pricing. New patient exams, adjustments, sports recovery, prenatal care, massage, and posture assessments.">
+<link rel="canonical" href="https://lakeviewspinewellness.com/services/">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -78,64 +80,78 @@
             },
         }
     </script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- GSAP — High-End Motion -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body class="bg-background text-on-surface font-body antialiased">
-<!-- TopNavBar -->
-<nav class="sticky top-0 w-full z-50 bg-emerald-800/80 backdrop-blur-xl dark:bg-emerald-950/80 no-border tonal-transition-via-glassmorphism shadow-[0_32px_64px_rgba(26,28,27,0.05)] font-['Plus_Jakarta_Sans'] tracking-tight leading-relaxed">
-<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
-<div class="text-xl font-bold tracking-tighter text-white">
-                Lakeview Spine &amp; Wellness
-            </div>
-<div class="hidden md:flex gap-8">
-<a class="text-white font-semibold border-b-2 border-white/30 pb-1 hover:bg-white/10 transition-all duration-300 scale-98 active:scale-95 duration-200" href="/services/">Services</a>
-<a class="text-white/80 font-medium hover:text-white transition-colors hover:bg-white/10 transition-all duration-300 scale-98 active:scale-95 duration-200" href="/about/">About</a>
-<a class="text-white/80 font-medium hover:text-white transition-colors hover:bg-white/10 transition-all duration-300 scale-98 active:scale-95 duration-200" href="/new-patients/">Wellness Journey</a>
-</div>
-<div>
-<a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-DEFAULT font-medium hover:opacity-90 transition-opacity" href="/book/">Book Consultation</a>
-</div>
-</div>
+<nav class="site-header">
+    <div class="header-inner">
+        <a class="header-logo" href="/">
+            Lakeview <span>Spine & Wellness</span>
+        </a>
+        <div class="hidden md:flex items-center gap-12">
+            <nav class="header-nav__links">
+                <a href="/services/">Services</a>
+                <a href="/new-patients/">New Patients</a>
+                <a href="/about/">About</a>
+                <a href="/blog/">Blog</a>
+                <a href="/contact/">Contact</a>
+            </nav>
+            <a class="btn btn--primary" href="/book/">Book Online</a>
+        </div>
+        <div class="header-mobile-controls">
+            <a href="tel:6165550192" class="header-call-btn">
+                <span class="material-symbols-outlined">call</span>
+            </a>
+            <button class="header-menu-btn" aria-label="Open menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </div>
 </nav>
-<!-- Page Header -->
-<header class="bg-surface-container-low py-32 px-8 text-center flex flex-col items-center justify-center">
-<div class="max-w-4xl mx-auto">
-<h1 class="text-5xl md:text-[3.5rem] font-headline font-extrabold tracking-[-0.02em] leading-tight text-on-surface mb-8">
-                Chiropractic and wellness care — clear, practical, and designed around you.
-            </h1>
-<p class="text-lg md:text-xl font-body text-secondary max-w-2xl mx-auto leading-relaxed">
-                Honest, skilled care focused on restoring your mobility and enhancing your daily life. We take the time to understand your needs and craft a personalized path forward.
-            </p>
-</div>
-</header>
 <main>
+<!-- Service Jump Nav -->
+<nav class="sticky top-[88px] z-40 bg-background/90 backdrop-blur-sm border-b border-outline-variant/15 py-3 px-6">
+  <div class="max-w-screen-xl mx-auto flex items-center gap-3 overflow-x-auto scrollbar-none">
+    <span class="text-xs uppercase tracking-widest text-secondary font-semibold shrink-0 mr-2">Jump to:</span>
+    <a href="#new-patient-exam"    class="service-pill">New Patient Exam</a>
+    <a href="#adjustments"         class="service-pill">Adjustments</a>
+    <a href="#sports-recovery"     class="service-pill">Sports Recovery</a>
+    <a href="#prenatal"            class="service-pill">Prenatal</a>
+    <a href="#posture-mobility"    class="service-pill">Posture &amp; Mobility</a>
+    <a href="#massage"             class="service-pill">Massage</a>
+  </div>
+</nav>
 <!-- Service 1: New Patient Exam -->
-<section class="bg-background py-24 px-8">
+<section id="new-patient-exam" class="bg-background py-24 px-8">
 <div class="max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center gap-16">
-<div class="lg:w-1/2 flex flex-col items-start text-left lg:pr-12">
+<div class="lg:w-1/2 flex flex-col items-start text-left lg:pr-12" data-gsap-stagger>
 <span class="text-secondary font-label text-xs uppercase tracking-widest mb-4">Initial Visit</span>
 <h2 class="text-4xl font-headline font-bold text-on-surface mb-6">New Patient Exam</h2>
 <p class="text-lg text-secondary mb-8 leading-relaxed">A comprehensive assessment of your spinal health, mobility, and specific concerns. We'll discuss your history, perform an exam, and outline a tailored wellness plan.</p>
 <div class="flex items-center gap-6 mb-8">
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined text-primary">schedule</span>
-<span class="text-secondary font-medium">45 min</span>
+<span class="text-secondary font-medium">60 min</span>
 </div>
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined text-primary">payments</span>
 <span class="text-secondary font-medium">$95</span>
 </div>
 </div>
-<a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-DEFAULT font-medium hover:opacity-90 transition-opacity" href="/book/">Book Now</a>
+<a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-DEFAULT font-medium hover:opacity-90 transition-opacity" href="/book/?service=new-patient-exam">Book Now</a>
 </div>
-<div class="lg:w-1/2 w-full">
-<img alt="Doctor examining patient's spine in a modern clinical setting" class="w-full h-[500px] object-cover rounded-2xl" data-alt="Doctor examining patient's spine in a modern clinical setting with soft natural light" src="/images/SERVICE-ADJUSTMENT-01.png"/>
+<div class="lg:w-1/2 w-full" data-gsap="fade-left">
+<img alt="Doctor examining patient's spine in a modern clinical setting" class="w-full h-[500px] object-cover rounded-2xl shadow-lg" src="/images/service_exam_premium.png"/>
 </div>
 </div>
 </section>
 <!-- Service 2: Chiropractic Adjustments -->
-<section class="bg-surface-container-low py-24 px-8">
+<section id="adjustments" class="bg-surface-container-low py-24 px-8">
 <div class="max-w-screen-xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-16">
-<div class="lg:w-1/2 flex flex-col items-start text-left lg:pl-12">
+<div class="lg:w-1/2 flex flex-col items-start text-left lg:pl-12" data-gsap-stagger>
 <span class="text-secondary font-label text-xs uppercase tracking-widest mb-4">Core Care</span>
 <h2 class="text-4xl font-headline font-bold text-on-surface mb-6">Chiropractic Adjustments</h2>
 <p class="text-lg text-secondary mb-8 leading-relaxed">Targeted spinal manipulations to improve alignment, reduce pain, and restore proper function to your nervous system. Precise and personalized care.</p>
@@ -149,18 +165,18 @@
 <span class="text-secondary font-medium">$55</span>
 </div>
 </div>
-<a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-DEFAULT font-medium hover:opacity-90 transition-opacity" href="/book/">Book Now</a>
+<a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-DEFAULT font-medium hover:opacity-90 transition-opacity" href="/book/?service=adjustment">Book Now</a>
 </div>
-<div class="lg:w-1/2 w-full">
-<img alt="Chiropractic adjustment on a modern treatment table" class="w-full h-[500px] object-cover rounded-2xl" data-alt="Chiropractor performing adjustment on patient on modern treatment table, calm clinical setting" src="/images/SERVICE-ADJUSTMENT-01.png"/>
+<div class="lg:w-1/2 w-full" data-gsap="fade-right">
+<img alt="Chiropractic adjustment on a modern treatment table" class="w-full h-[500px] object-cover rounded-2xl shadow-lg" src="/images/service_adjustment_premium.png"/>
 </div>
 </div>
 </section>
 
 <!-- Service 3: Sports Recovery -->
-<section class="bg-background py-24 px-8">
+<section id="sports-recovery" class="bg-background py-24 px-8">
 <div class="max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center gap-16">
-<div class="lg:w-1/2 flex flex-col items-start text-left lg:pr-12">
+<div class="lg:w-1/2 flex flex-col items-start text-left lg:pr-12" data-gsap-stagger>
 <span class="text-secondary font-label text-xs uppercase tracking-widest mb-4">Active Lifestyles</span>
 <h2 class="text-4xl font-headline font-bold text-on-surface mb-6">Sports Recovery & Movement</h2>
 <p class="text-lg text-secondary mb-8 leading-relaxed">Instrument-assisted soft tissue work, kinesiology taping, and functional movement screening for athletes and active individuals.</p>
@@ -174,18 +190,18 @@
 <span class="text-secondary font-medium">$65</span>
 </div>
 </div>
-<a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-DEFAULT font-medium hover:opacity-90 transition-opacity" href="/book/">Book Now</a>
+<a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-DEFAULT font-medium hover:opacity-90 transition-opacity" href="/book/?service=sports-recovery">Book Now</a>
 </div>
-<div class="lg:w-1/2 w-full">
-<img alt="Sports Recovery" class="w-full h-[500px] object-cover rounded-2xl" src="/images/SERVICE-SPORTS-01.png"/>
+<div class="lg:w-1/2 w-full" data-gsap="fade-left">
+<img alt="Sports Recovery" class="w-full h-[500px] object-cover rounded-2xl shadow-lg" src="/images/service_sports_premium.png"/>
 </div>
 </div>
 </section>
 
 <!-- Service 4: Prenatal Chiropractic -->
-<section class="bg-surface-container-low py-24 px-8">
+<section id="prenatal" class="bg-surface-container-low py-24 px-8">
 <div class="max-w-screen-xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-16">
-<div class="lg:w-1/2 flex flex-col items-start text-left lg:pl-12">
+<div class="lg:w-1/2 flex flex-col items-start text-left lg:pl-12" data-gsap-stagger>
 <span class="text-secondary font-label text-xs uppercase tracking-widest mb-4">Expectant Mothers</span>
 <h2 class="text-4xl font-headline font-bold text-on-surface mb-6">Prenatal Chiropractic</h2>
 <p class="text-lg text-secondary mb-8 leading-relaxed">Webster-certified care to support maternal comfort and prepare the pelvis for birth using gentle, specialized tables and techniques.</p>
@@ -199,18 +215,18 @@
 <span class="text-secondary font-medium">$70</span>
 </div>
 </div>
-<a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-DEFAULT font-medium hover:opacity-90 transition-opacity" href="/book/">Book Now</a>
+<a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-DEFAULT font-medium hover:opacity-90 transition-opacity" href="/book/?service=prenatal">Book Now</a>
 </div>
-<div class="lg:w-1/2 w-full">
-<img alt="Prenatal Care" class="w-full h-[500px] object-cover rounded-2xl" src="/images/SERVICE-PRENATAL-01.png"/>
+<div class="lg:w-1/2 w-full" data-gsap="fade-right">
+<img alt="Prenatal Care" class="w-full h-[500px] object-cover rounded-2xl shadow-lg" src="/images/service_prenatal_premium.png"/>
 </div>
 </div>
 </section>
 
 <!-- Service 5: Posture -->
-<section class="bg-background py-24 px-8">
+<section id="posture-mobility" class="bg-background py-24 px-8">
 <div class="max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center gap-16">
-<div class="lg:w-1/2 flex flex-col items-start text-left lg:pr-12">
+<div class="lg:w-1/2 flex flex-col items-start text-left lg:pr-12" data-gsap-stagger>
 <span class="text-secondary font-label text-xs uppercase tracking-widest mb-4">Desk Workers</span>
 <h2 class="text-4xl font-headline font-bold text-on-surface mb-6">Posture & Mobility Assessment</h2>
 <p class="text-lg text-secondary mb-8 leading-relaxed">A focused evaluation of ergonomic strains and postural habits, complete with a take-home mobility and stretching protocol.</p>
@@ -224,18 +240,18 @@
 <span class="text-secondary font-medium">$80</span>
 </div>
 </div>
-<a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-DEFAULT font-medium hover:opacity-90 transition-opacity" href="/book/">Book Now</a>
+<a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-DEFAULT font-medium hover:opacity-90 transition-opacity" href="/book/?service=posture-mobility">Book Now</a>
 </div>
-<div class="lg:w-1/2 w-full">
-<img alt="Posture & Mobility Assessment" class="w-full h-[500px] object-cover rounded-2xl" src="/images/SERVICE-ADJUSTMENT-01.png"/>
+<div class="lg:w-1/2 w-full" data-gsap="fade-left">
+<img alt="Posture & Mobility Assessment" class="w-full h-[500px] object-cover rounded-2xl shadow-lg" src="/images/service_mobility_premium.png"/>
 </div>
 </div>
 </section>
 
 <!-- Service 6: Massage -->
-<section class="bg-surface-container-low py-24 px-8">
+<section id="massage" class="bg-surface-container-low py-24 px-8">
 <div class="max-w-screen-xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-16">
-<div class="lg:w-1/2 flex flex-col items-start text-left lg:pl-12">
+<div class="lg:w-1/2 flex flex-col items-start text-left lg:pl-12" data-gsap-stagger>
 <span class="text-secondary font-label text-xs uppercase tracking-widest mb-4">Complementary Care</span>
 <h2 class="text-4xl font-headline font-bold text-on-surface mb-6">Massage Therapy</h2>
 <p class="text-lg text-secondary mb-8 leading-relaxed">Deep tissue, myofascial release, and relaxation massage designed to work in tandem with your chiropractic adjustments.</p>
@@ -249,28 +265,107 @@
 <span class="text-secondary font-medium">$90 - $130</span>
 </div>
 </div>
-<a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-DEFAULT font-medium hover:opacity-90 transition-opacity" href="/book/">Book Now</a>
+<a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-DEFAULT font-medium hover:opacity-90 transition-opacity" href="/book/?service=massage">Book Now</a>
 </div>
-<div class="lg:w-1/2 w-full">
-<img alt="Massage" class="w-full h-[500px] object-cover rounded-2xl" src="/images/SERVICE-ADJUSTMENT-01.png"/>
+<div class="lg:w-1/2 w-full" data-gsap="fade-right">
+<img alt="Massage" class="w-full h-[500px] object-cover rounded-2xl shadow-lg" src="/images/service_massage_premium.png"/>
 </div>
 </div>
 </section>
 
 </main>
 <!-- Footer -->
-<footer class="w-full px-12 py-16 flex flex-col md:flex-row justify-between items-center gap-8 bg-[#f4f4f2] dark:bg-stone-900 font-['Plus_Jakarta_Sans'] text-sm tracking-wide rounded-t-none background-color-shift-from-surface flat no-shadows border-t border-stone-200/20">
-<div class="text-lg font-bold text-emerald-900 dark:text-emerald-100 tracking-tighter">
-            Lakeview Spine &amp; Wellness
+<footer class="w-full bg-[#1a1c1b] text-white pt-24 pb-12 font-['Plus_Jakarta_Sans']">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+            <div class="space-y-6">
+                <a class="text-xl font-extrabold tracking-tighter text-[#b8edde] hover:opacity-80 transition-opacity block" href="/">
+                    Lakeview Spine & Wellness
+                </a>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    A restorative studio experience in Grand Rapids. Specializing in unhurried, evidence-based chiropractic care focused on long-term wellness.
+                </p>
+                <div class="flex gap-4 pt-2">
+                    <a class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-[#316357] hover:border-[#316357] transition-all group" href="#">
+                         <span class="material-symbols-outlined text-sm text-gray-400 group-hover:text-white">share</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-[#316357] hover:border-[#316357] transition-all group" href="#">
+                         <span class="material-symbols-outlined text-sm text-gray-400 group-hover:text-white">alternate_email</span>
+                    </a>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-emerald-400/80">Services</h4>
+                <nav class="flex flex-col gap-4">
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Chiropractic Adjustments</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Sports Recovery</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Prenatal Care</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Massage Therapy</a>
+                </nav>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-emerald-400/80">Practice</h4>
+                <nav class="flex flex-col gap-4">
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/about/">About the Clinic</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/new-patients/">New Patients</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/insurance/">Insurance Info</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/blog/">Clinical Notes</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/faq/">FAQ</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/new-patient-forms/">Patient Forms</a>
+                </nav>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-emerald-400/80">Get in Touch</h4>
+                <div class="space-y-4 text-sm">
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-[#b8edde] text-lg">location_on</span>
+                        <p class="text-gray-400">123 Lakeview Drive SE<br/>Grand Rapids, MI 49506</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-[#b8edde] text-lg">call</span>
+                        <a class="text-gray-400 hover:text-white transition-colors" href="tel:6165550192">(616) 555-0192</a>
+                    </div>
+                    <a class="inline-flex items-center justify-center bg-[#316357] text-white px-6 py-3 rounded-sm text-sm font-semibold hover:bg-[#4a7c6f] transition-all w-full mt-4" href="/book/">
+                        Book Your Visit
+                    </a>
+                </div>
+            </div>
         </div>
-<div class="flex flex-wrap justify-center gap-6">
-<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors opacity-80 hover:opacity-100 transition-opacity" href="/privacy/">Privacy Policy</a>
-<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors opacity-80 hover:opacity-100 transition-opacity" href="/privacy/">Terms of Service</a>
-<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors opacity-80 hover:opacity-100 transition-opacity" href="/contact/">Accessibility</a>
-<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors opacity-80 hover:opacity-100 transition-opacity" href="/contact/">Contact</a>
-</div>
-<div class="text-emerald-900 dark:text-emerald-400">
-            © 2024 Lakeview Spine &amp; Wellness. The Restorative Studio.
+        <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-gray-500 text-xs">
+                © 2026 Lakeview Spine & Wellness. All rights reserved.
+            </p>
+            <div class="flex gap-8 text-xs">
+                <a class="text-gray-500 hover:text-white transition-colors" href="/privacy/">Privacy Policy</a>
+                <a class="text-gray-500 hover:text-white transition-colors" href="/privacy/">Terms of Service</a>
+                <a class="text-gray-500 hover:text-white transition-colors" href="/contact/">Accessibility</a>
+            </div>
         </div>
+    </div>
 </footer>
+  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-menu__header">
+      <a href="/" class="header-logo">Lakeview <span>Spine & Wellness</span></a>
+      <button class="mobile-menu__close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu__body">
+      <div class="mobile-menu__cta"><a href="/book/" class="btn btn--primary btn--lg">Book Online →</a></div>
+      <div class="mobile-menu__divider"></div>
+      <nav class="mobile-menu__links">
+        <a href="/services/">Services</a>
+        <a href="/new-patients/">New Patients</a>
+        <a href="/about/">About</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <div class="mobile-menu__contact">
+        <a href="tel:6165550192">(616) 555-0192</a>
+        <a href="mailto:hello@lakeviewspinewellness.com">hello@lakeviewspinewellness.com</a>
+        <p class="mobile-menu__hours">Mon–Fri: 8am–6pm (Wed from 10am)<br>Sat: 9am–1pm · Sun: Closed</p>
+      </div>
+    </div>
+  </div>
+<script src="/js/main.js"></script>
 </body></html>

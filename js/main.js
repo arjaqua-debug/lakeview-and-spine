@@ -1,16 +1,96 @@
 /* ============================================================
    LAKEVIEW SPINE & WELLNESS — Main JavaScript
-   Version: 1.0 | April 2026
+   Version: 1.1 | Antigravity Design Update
    ============================================================ */
 
 (function () {
   'use strict';
 
+  // Register ScrollTrigger
+  if (typeof gsap !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+  }
+
+  /* ── GSAP MOTION ENGINE ──────────────────────────────────── */
+  const initGSAP = () => {
+    if (typeof gsap === 'undefined') return;
+
+    // Generic Entrance Animations
+    const fadeElements = document.querySelectorAll('[data-gsap="fade-up"], [data-gsap="fade-left"], [data-gsap="fade-right"]');
+    fadeElements.forEach(el => {
+      const effect = el.getAttribute('data-gsap');
+      let x = 0, y = 0;
+      
+      if (effect === 'fade-up') y = 60;
+      if (effect === 'fade-left') x = 60;
+      if (effect === 'fade-right') x = -60;
+
+      gsap.from(el, {
+        x: x,
+        y: y,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+          toggleActions: "play none none none"
+        }
+      });
+    });
+
+    // Staggered Entrance for Grids/Lists
+    const staggerContainers = document.querySelectorAll('[data-gsap-stagger]');
+    staggerContainers.forEach(container => {
+      gsap.from(container.children, {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: container,
+          start: "top 80%"
+        }
+      });
+    });
+
+    // Parallax Effects for Images
+    const parallaxImages = document.querySelectorAll('.depth-float img');
+    parallaxImages.forEach(img => {
+      gsap.to(img, {
+        yPercent: 10,
+        ease: "none",
+        scrollTrigger: {
+          trigger: img,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+    });
+
+    // Hero column parallax
+    const heroParallax = document.querySelector('[data-gsap-parallax]');
+    if (heroParallax) {
+      gsap.to(heroParallax, {
+        yPercent: -15,
+        ease: "none",
+        scrollTrigger: {
+          trigger: heroParallax,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+    }
+  };
+
   /* ── HEADER SCROLL BEHAVIOR ──────────────────────────────── */
   const header = document.querySelector('.site-header');
   if (header) {
     const onScroll = () => {
-      if (window.scrollY > 8) {
+      if (window.scrollY > 50) {
         header.classList.add('scrolled');
       } else {
         header.classList.remove('scrolled');
@@ -24,107 +104,66 @@
   const menuBtn   = document.querySelector('.header-menu-btn');
   const closeBtn  = document.querySelector('.mobile-menu__close');
   const mobileMenu = document.querySelector('.mobile-menu');
-  const mobileLinks = document.querySelectorAll('.mobile-menu__links a, .mobile-menu__cta a');
+  const mobileLinks = document.querySelectorAll('.mobile-menu__links a');
 
   function openMenu() {
     if (!mobileMenu) return;
     mobileMenu.classList.add('open');
     document.body.style.overflow = 'hidden';
-    if (closeBtn) closeBtn.focus();
+
+    if (typeof gsap === 'undefined') return;
+    gsap.from('.mobile-menu__links a', {
+      x: 30,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.1,
+      ease: "power3.out",
+      delay: 0.2
+    });
   }
 
   function closeMenu() {
     if (!mobileMenu) return;
     mobileMenu.classList.remove('open');
     document.body.style.overflow = '';
-    if (menuBtn) menuBtn.focus();
   }
 
   if (menuBtn)  menuBtn.addEventListener('click', openMenu);
   if (closeBtn) closeBtn.addEventListener('click', closeMenu);
-
-  // Close when a link is clicked
   mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
-
-  // Close on Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('open')) {
-      closeMenu();
-    }
-  });
 
   /* ── ACCORDION ───────────────────────────────────────────── */
   const accordionItems = document.querySelectorAll('.accordion__item');
-
   accordionItems.forEach((item) => {
     const btn  = item.querySelector('.accordion__btn');
     const body = item.querySelector('.accordion__body');
     if (!btn || !body) return;
 
-    // Set ARIA attributes
-    const id = 'accordion-body-' + Math.random().toString(36).slice(2, 8);
-    body.id = id;
-    btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
-    btn.setAttribute('aria-controls', id);
-
     btn.addEventListener('click', () => {
       const isOpen = item.classList.contains('open');
-
-      // Optional: close all others in the same accordion (single-open mode)
-      // Comment out the next 4 lines to allow multiple open at once
-      const parentAccordion = item.closest('.accordion');
-      if (parentAccordion) {
-        parentAccordion.querySelectorAll('.accordion__item.open').forEach(openItem => {
-          if (openItem !== item) {
-            openItem.classList.remove('open');
-            openItem.querySelector('.accordion__btn').setAttribute('aria-expanded', 'false');
-          }
-        });
-      }
-
       item.classList.toggle('open', !isOpen);
-      btn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
     });
   });
 
-  /* ── NETLIFY FORM SUCCESS MESSAGE ────────────────────────── */
-  // Show inline success message if returning from a Netlify form redirect
-  // (alternative approach: use the `action` attribute redirect instead)
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('form') === 'success') {
-    const form = document.querySelector('.form');
-    if (form) {
-      form.innerHTML = `
-        <div style="text-align:center; padding: 40px 0;">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4A7C6F" stroke-width="2" style="margin: 0 auto 16px;">
-            <circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/>
-          </svg>
-          <h3 style="margin-bottom:8px;">Thank you — message received.</h3>
-          <p style="color:#5C5C56;">We'll get back to you within one business day.<br>
-          Need to reach us sooner? Call <a href="tel:6165550192">(616) 555-0192</a>.</p>
-        </div>
-      `;
-    }
+  /* ── SERVICE JUMP NAV ACTIVE PILL ───────────────────────── */
+  const servicePills = document.querySelectorAll('.service-pill');
+  if (servicePills.length && typeof ScrollTrigger !== 'undefined') {
+    servicePills.forEach(pill => {
+      const target = document.querySelector(pill.getAttribute('href'));
+      if (!target) return;
+      ScrollTrigger.create({
+        trigger: target,
+        start: 'top center',
+        end: 'bottom center',
+        onEnter: () => { servicePills.forEach(p => p.classList.remove('active')); pill.classList.add('active'); },
+        onEnterBack: () => { servicePills.forEach(p => p.classList.remove('active')); pill.classList.add('active'); }
+      });
+    });
   }
 
-  /* ── ACTIVE NAV LINK ─────────────────────────────────────── */
-  const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
-  document.querySelectorAll('.header-nav__links a, .mobile-menu__links a').forEach(link => {
-    const href = link.getAttribute('href').replace(/\/$/, '') || '/';
-    if (href === currentPath || (href !== '/' && currentPath.startsWith(href))) {
-      link.style.color = 'var(--color-accent)';
-    }
-  });
-
-  /* ── SMOOTH SCROLL POLYFILL (for older iOS) ──────────────── */
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
+  /* ── ON LOAD ─────────────────────────────────────────────── */
+  window.addEventListener('DOMContentLoaded', () => {
+    initGSAP();
   });
 
 })();

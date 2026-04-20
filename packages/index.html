@@ -1,12 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en"><head>
 <meta charset="utf-8"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Packages and Memberships - Lakeview Spine &amp; Wellness</title>
+<title>Packages &amp; Memberships — Lakeview Spine &amp; Wellness, Grand Rapids MI</title>
+<meta name="description" content="Chiropractic care packages and monthly memberships at Lakeview Spine &amp; Wellness in Grand Rapids, MI. Save per visit with no long-term contracts.">
+<link rel="canonical" href="https://lakeviewspinewellness.com/packages/">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
     tailwind.config = {
@@ -95,24 +97,37 @@
       text-wrap: balance;
     }
   </style>
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- GSAP — High-End Motion -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body class="bg-background text-on-background antialiased min-h-screen flex flex-col">
-<!-- TopAppBar -->
-<header class="glass-nav dark:bg-[#316357]/80 docked full-width top-0 no-border tonal-transition shadow-xl shadow-[#1a1c1b]/5 fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-4 hidden md:flex font-['Plus_Jakarta_Sans'] tracking-tight text-body-lg">
-<div class="text-xl font-bold tracking-tighter text-white uppercase text-[#316357] dark:text-[#f9f9f7]">
-      Lakeview Spine &amp; Wellness
+<nav class="site-header">
+    <div class="header-inner">
+        <a class="header-logo" href="/">
+            Lakeview <span>Spine & Wellness</span>
+        </a>
+        <div class="hidden md:flex items-center gap-12">
+            <nav class="header-nav__links">
+                <a href="/services/">Services</a>
+                <a href="/new-patients/">New Patients</a>
+                <a href="/about/">About</a>
+                <a href="/blog/">Blog</a>
+                <a href="/contact/">Contact</a>
+            </nav>
+            <a class="btn btn--primary" href="/book/">Book Online</a>
+        </div>
+        <div class="header-mobile-controls">
+            <a href="tel:6165550192" class="header-call-btn">
+                <span class="material-symbols-outlined">call</span>
+            </a>
+            <button class="header-menu-btn" aria-label="Open menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
     </div>
-<nav class="flex space-x-8 items-center">
-<a class="text-white/80 hover:text-white transition-colors hover:bg-white/10 transition-all duration-300 px-3 py-2 rounded-lg text-[#316357] dark:text-[#f9f9f7]" href="/services/">Treatments</a>
-<a class="text-white border-b-2 border-white/50 pb-1 hover:bg-white/10 transition-all duration-300 px-3 py-2 text-[#316357] dark:text-[#f9f9f7]" href="/packages/">Packages</a>
-<a class="text-white/80 hover:text-white transition-colors hover:bg-white/10 transition-all duration-300 px-3 py-2 rounded-lg text-[#316357] dark:text-[#f9f9f7]" href="/about/">About</a>
-<a class="text-white/80 hover:text-white transition-colors hover:bg-white/10 transition-all duration-300 px-3 py-2 rounded-lg text-[#316357] dark:text-[#f9f9f7]" href="/contact/">Contact</a>
 </nav>
-<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-lg font-medium hover:shadow-[0_8px_32px_rgba(26,28,27,0.06)] transition-all duration-300 scale-95 duration-200 ease-in-out">
-      Book Session
-    </button>
-</header>
-<!-- Page Header -->
 <main class="flex-grow pt-24 md:pt-32">
 <section class="bg-surface-container-low py-24 px-6 md:px-12 lg:px-24 flex flex-col items-center text-center">
 <span class="text-secondary tracking-[0.05em] uppercase text-xs font-semibold mb-6">Care Plans</span>
@@ -142,7 +157,7 @@
 <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-primary-container"></div>
 <span class="inline-block bg-primary-fixed/30 text-on-primary-fixed px-3 py-1 rounded-full text-xs uppercase tracking-widest font-semibold mb-6 self-start">Most popular</span>
 <h3 class="text-2xl font-headline text-on-background mb-2">Momentum Package</h3>
-<p class="text-secondary mb-8 flex-grow">Steady progress for lasting holistic health.</p>
+<p class="text-secondary mb-8 flex-grow">Steady, measurable progress with a consistent care plan.</p>
 <div class="mb-8">
 <span class="text-3xl font-headline text-on-background font-medium">$270</span>
 <span class="text-secondary text-sm ml-2">/ 6 visits</span>
@@ -192,37 +207,99 @@
 </div>
 </section>
 </main>
-<!-- BottomNavBar (Mobile Only) -->
-<nav class="bg-[#f9f9f7]/95 backdrop-blur-lg dark:bg-[#1a1c1b]/95 text-[#316357] dark:text-[#4A7C6F] font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest docked full-width bottom-0 rounded-t-3xl tonal-shift from surface-container-low shadow-[0_-8px_32px_rgba(26,28,27,0.04)] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-safe pt-3 md:hidden">
-<a class="flex flex-col items-center justify-center text-[#5f5f59] opacity-60 hover:opacity-100 transition-opacity" href="/">
-<span class="material-symbols-outlined mb-1 text-xl" data-icon="home">home</span>
-<span>Home</span>
-</a>
-<a class="flex flex-col items-center justify-center bg-[#4A7C6F]/10 text-[#316357] rounded-xl px-4 py-2 Active: translate-y-[-2px] transition-transform" href="/packages/">
-<span class="material-symbols-outlined mb-1 text-xl" data-icon="package_2" data-weight="fill">package_2</span>
-<span>Packages</span>
-</a>
-<a class="flex flex-col items-center justify-center text-[#5f5f59] opacity-60 hover:opacity-100 transition-opacity" href="/">
-<span class="material-symbols-outlined mb-1 text-xl" data-icon="spa">spa</span>
-<span>Wellness</span>
-</a>
-<a class="flex flex-col items-center justify-center text-[#5f5f59] opacity-60 hover:opacity-100 transition-opacity" href="/">
-<span class="material-symbols-outlined mb-1 text-xl" data-icon="person">person</span>
-<span>Account</span>
-</a>
-</nav>
+
 <!-- Footer -->
-<footer class="bg-[#f4f4f2] dark:bg-[#1a1c1b] text-[#316357] dark:text-[#4A7C6F] font-['Plus_Jakarta_Sans'] text-body-lg leading-relaxed full-width tonal-shift via surface-container-low flat no-shadows w-full py-16 px-8 mt-auto border-t border-[#c0c8c4]/15 fade-in duration-500 pb-24 md:pb-16">
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
-<div class="text-center md:text-left">
-<div class="text-lg font-bold text-[#316357] mb-4">Lakeview Spine &amp; Wellness</div>
-<p class="text-[#5f5f59] text-sm">© 2024 Lakeview Spine &amp; Wellness. A Restorative Studio Experience.</p>
-</div>
-<div class="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8">
-<a class="text-[#5f5f59] hover:text-[#316357] transition-colors underline-offset-4 hover:underline text-sm" href="/privacy/">Privacy Policy</a>
-<a class="text-[#5f5f59] hover:text-[#316357] transition-colors underline-offset-4 hover:underline text-sm" href="/privacy/">Terms of Service</a>
-<a class="text-[#5f5f59] hover:text-[#316357] transition-colors underline-offset-4 hover:underline text-sm uppercase tracking-widest font-semibold" href="/blog/">Clinical Notes</a>
-</div>
-</div>
+<footer class="w-full bg-[#1a1c1b] text-white pt-24 pb-12 font-['Plus_Jakarta_Sans']">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+            <div class="space-y-6">
+                <a class="text-xl font-extrabold tracking-tighter text-[#b8edde] hover:opacity-80 transition-opacity block" href="/">
+                    Lakeview Spine & Wellness
+                </a>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    A restorative studio experience in Grand Rapids. Specializing in unhurried, evidence-based chiropractic care focused on long-term wellness.
+                </p>
+                <div class="flex gap-4 pt-2">
+                    <a class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-[#316357] hover:border-[#316357] transition-all group" href="#">
+                         <span class="material-symbols-outlined text-sm text-gray-400 group-hover:text-white">share</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-[#316357] hover:border-[#316357] transition-all group" href="#">
+                         <span class="material-symbols-outlined text-sm text-gray-400 group-hover:text-white">alternate_email</span>
+                    </a>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-emerald-400/80">Services</h4>
+                <nav class="flex flex-col gap-4">
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Chiropractic Adjustments</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Sports Recovery</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Prenatal Care</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Massage Therapy</a>
+                </nav>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-emerald-400/80">Practice</h4>
+                <nav class="flex flex-col gap-4">
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/about/">About the Clinic</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/new-patients/">New Patients</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/insurance/">Insurance Info</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/blog/">Clinical Notes</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/faq/">FAQ</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/new-patient-forms/">Patient Forms</a>
+                </nav>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-emerald-400/80">Get in Touch</h4>
+                <div class="space-y-4 text-sm">
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-[#b8edde] text-lg">location_on</span>
+                        <p class="text-gray-400">123 Lakeview Drive SE<br/>Grand Rapids, MI 49506</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-[#b8edde] text-lg">call</span>
+                        <a class="text-gray-400 hover:text-white transition-colors" href="tel:6165550192">(616) 555-0192</a>
+                    </div>
+                    <a class="inline-flex items-center justify-center bg-[#316357] text-white px-6 py-3 rounded-sm text-sm font-semibold hover:bg-[#4a7c6f] transition-all w-full mt-4" href="/book/">
+                        Book Your Visit
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-gray-500 text-xs">
+                © 2026 Lakeview Spine & Wellness. All rights reserved.
+            </p>
+            <div class="flex gap-8 text-xs">
+                <a class="text-gray-500 hover:text-white transition-colors" href="/privacy/">Privacy Policy</a>
+                <a class="text-gray-500 hover:text-white transition-colors" href="/privacy/">Terms of Service</a>
+                <a class="text-gray-500 hover:text-white transition-colors" href="/contact/">Accessibility</a>
+            </div>
+        </div>
+    </div>
 </footer>
+  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-menu__header">
+      <a href="/" class="header-logo">Lakeview <span>Spine & Wellness</span></a>
+      <button class="mobile-menu__close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu__body">
+      <div class="mobile-menu__cta"><a href="/book/" class="btn btn--primary btn--lg">Book Online →</a></div>
+      <div class="mobile-menu__divider"></div>
+      <nav class="mobile-menu__links">
+        <a href="/services/">Services</a>
+        <a href="/new-patients/">New Patients</a>
+        <a href="/about/">About</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <div class="mobile-menu__contact">
+        <a href="tel:6165550192">(616) 555-0192</a>
+        <a href="mailto:hello@lakeviewspinewellness.com">hello@lakeviewspinewellness.com</a>
+        <p class="mobile-menu__hours">Mon–Fri: 8am–6pm (Wed from 10am)<br>Sat: 9am–1pm · Sun: Closed</p>
+      </div>
+    </div>
+  </div>
+<script src="/js/main.js"></script>
 </body></html>

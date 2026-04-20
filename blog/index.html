@@ -1,80 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>Blog — Lakeview Spine &amp; Wellness, Grand Rapids MI</title>
-  <meta name="description" content="Helpful articles on chiropractic care, wellness, and injury prevention from Lakeview Spine &amp; Wellness in Grand Rapids, MI.">
+  <meta name="description" content="Articles on chiropractic care, recovery, posture, and staying active from Lakeview Spine &amp; Wellness in Grand Rapids, MI.">
   <link rel="canonical" href="https://lakeviewspinewellness.com/blog/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                "colors": {
+                        "on-tertiary-container": "#fdfaf5",
+                        "tertiary-container": "#74736f",
+                        "primary-fixed-dim": "#9dd1c2",
+                        "surface-container-highest": "#e2e3e1",
+                        "surface-bright": "#f9f9f7",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#e7fff6",
+                        "secondary-fixed": "#e4e3db",
+                        "background": "#f9f9f7",
+                        "surface-container-low": "#f4f4f2",
+                        "inverse-primary": "#9dd1c2",
+                        "surface": "#f9f9f7",
+                        "tertiary-fixed": "#e5e2dd",
+                        "on-tertiary-fixed-variant": "#474743",
+                        "primary-container": "#4a7c6f",
+                        "on-secondary-fixed": "#1b1c17",
+                        "on-background": "#1a1c1b",
+                        "inverse-on-surface": "#f1f1ef",
+                        "surface-container-high": "#e8e8e6",
+                        "primary-fixed": "#b8edde",
+                        "on-secondary-fixed-variant": "#474741",
+                        "on-primary-fixed": "#00201a",
+                        "tertiary": "#5b5a57",
+                        "surface-container": "#eeeeec",
+                        "outline-variant": "#c0c8c4",
+                        "tertiary-fixed-dim": "#c9c6c1",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#1c1c19",
+                        "on-secondary-container": "#65655e",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#35675b",
+                        "secondary-fixed-dim": "#c8c7bf",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#404946",
+                        "secondary-container": "#e4e3db",
+                        "primary": "#316357",
+                        "outline": "#707975",
+                        "on-primary-fixed-variant": "#1b4f44",
+                        "surface-variant": "#e2e3e1",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dadad8",
+                        "secondary": "#5f5f59",
+                        "inverse-surface": "#2f3130",
+                        "on-surface": "#1a1c1b",
+                        "error-container": "#ffdad6"
+                },
+                "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                },
+                "fontFamily": {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
+                }
+              },
+            },
+          }
+      </script>
+      <style type="text/tailwindcss">
+          body {
+              font-family: 'Plus Jakarta Sans', sans-serif;
+              background-color: theme('colors.background');
+              color: theme('colors.on-background');
+          }
+          .text-display-lg {
+              font-size: 2.25rem;
+              line-height: 1.2;
+              letter-spacing: -0.01em;
+          }
+          .text-headline-lg {
+              font-size: 1.875rem;
+              line-height: 1.2;
+          }
+          .text-body-lg {
+              font-size: 0.9375rem;
+              line-height: 1.6;
+          }
+          .text-label-md {
+              font-size: 0.75rem;
+              text-transform: uppercase;
+              letter-spacing: 0.05em;
+          }
+      </style>
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- GSAP — High-End Motion -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
-<body>
-
-  <header class="site-header" role="banner">
+<body class="bg-background text-on-surface antialiased pt-24 selection:bg-primary-container selection:text-on-primary-container">
+<nav class="site-header">
     <div class="header-inner">
-      <a href="/" class="header-logo">Lakeview <span>Spine &amp; Wellness</span></a>
-      <nav class="header-nav" aria-label="Main navigation">
-        <div class="header-nav__links">
-          <a href="/services/">Services</a>
-          <a href="/new-patients/">New Patients</a>
-          <a href="/about/">About</a>
-          <a href="/blog/">Blog</a>
-          <a href="/contact/">Contact</a>
-        </div>
-        <a href="/book/" class="btn btn--primary">Book Online</a>
-      </nav>
-      <div class="header-mobile-controls">
-        <a href="tel:6165550192" class="header-call-btn" aria-label="Call us">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .99h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <a class="header-logo" href="/">
+            Lakeview <span>Spine & Wellness</span>
         </a>
-        <button class="header-menu-btn" aria-label="Open menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        </button>
-      </div>
+        <div class="hidden md:flex items-center gap-12">
+            <nav class="header-nav__links">
+                <a href="/services/">Services</a>
+                <a href="/new-patients/">New Patients</a>
+                <a href="/about/">About</a>
+                <a href="/blog/">Blog</a>
+                <a href="/contact/">Contact</a>
+            </nav>
+            <a class="btn btn--primary" href="/book/">Book Online</a>
+        </div>
+        <div class="header-mobile-controls">
+            <a href="tel:6165550192" class="header-call-btn">
+                <span class="material-symbols-outlined">call</span>
+            </a>
+            <button class="header-menu-btn" aria-label="Open menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
     </div>
-  </header>
-
-  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
-    <div class="mobile-menu__header">
-      <a href="/" class="header-logo">Lakeview <span>Spine &amp; Wellness</span></a>
-      <button class="mobile-menu__close" aria-label="Close menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
+</nav>
+<main id="main-content">
+<header class="relative py-24 md:py-32 px-6 overflow-hidden min-h-[50vh] flex items-center justify-center group">
+    <div class="absolute inset-0 z-0">
+        <img src="/images/about_clinic_tranquil.png" alt="Lakeview Clinical Notes" class="w-full h-full object-cover transition-transform duration-[20000ms] scale-110 group-hover:scale-100">
+        <div class="absolute inset-0 bg-white/40 backdrop-blur-[1px]"></div>
+        <div class="absolute inset-0 bg-gradient-to-tr from-white/40 via-transparent to-white/10"></div>
     </div>
-    <div class="mobile-menu__body">
-      <div class="mobile-menu__cta"><a href="/book/" class="btn btn--primary btn--lg">Book Online →</a></div>
-      <div class="mobile-menu__divider"></div>
-      <nav class="mobile-menu__links">
-        <a href="/services/">Services</a><a href="/new-patients/">New Patients</a><a href="/about/">About</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
-      </nav>
-      <div class="mobile-menu__contact">
-        <a href="tel:6165550192">(616) 555-0192</a>
-        <a href="mailto:hello@lakeviewspinewellness.com">hello@lakeviewspinewellness.com</a>
-        <p class="mobile-menu__hours">Mon–Fri: 8am–6pm (Wed from 10am)<br>Sat: 9am–1pm · Sun: Closed</p>
-      </div>
+    <div class="max-w-4xl mx-auto text-center relative z-10 px-6">
+        <span class="text-label-md block mb-4 font-bold text-primary">The Blog</span>
+        <h1 class="font-headline text-[2.5rem] md:text-[4rem] font-extrabold tracking-tight text-on-surface mb-8 [text-shadow:_0_1px_20px_rgb(255_255_255_/_90%)]">
+            Helpful reads for patients and people who are just curious.
+        </h1>
+        <p class="text-lg md:text-xl font-body text-on-surface/90 font-medium max-w-2xl mx-auto leading-relaxed [text-shadow:_0_1px_10px_rgb(255_255_255_/_95%)]">
+            Practical information on chiropractic care, movement, and the kind of slow-building patterns that are worth paying attention to.
+        </p>
     </div>
-  </div>
-
-  <main id="main-content">
-
-    <div class="page-header">
-      <div class="container--text">
-        <span class="overline">The Blog</span>
-        <h1>Helpful reads for patients and people who are just curious.</h1>
-        <p class="lead">Practical information on chiropractic care, movement, and the kind of slow-building patterns that are worth paying attention to.</p>
-      </div>
-    </div>
+</header>
 
     <section class="section" aria-labelledby="articles-heading">
       <div class="container">
         <h2 id="articles-heading" class="sr-only">All articles</h2>
         <div class="blog-grid">
 
-          <article class="blog-card">
-            <div class="blog-card__img" role="img" aria-label="Person at desk with neck tension">BLOG-01-WORKSTATION.webp</div>
+          <article class="blog-card depth-float">
+            <div class="blog-card__img" role="img" aria-label="Person at desk with neck tension">
+              <img src="/images/service_mobility_premium.png" alt="Clinical mobility assessment" class="w-full h-full object-cover">
+            </div>
             <div class="blog-card__body">
               <p class="blog-card__tag">Wellness Tips</p>
               <h3><a href="/blog/workstation-habits-neck-tension/" style="color:inherit; text-decoration:none;">5 Workstation Habits That Are Probably Making Your Neck Worse</a></h3>
@@ -84,8 +171,10 @@
             </div>
           </article>
 
-          <article class="blog-card">
-            <div class="blog-card__img" role="img" aria-label="Doctor and patient in consultation">BLOG-02-FIRSTVISIT.webp</div>
+          <article class="blog-card depth-float">
+            <div class="blog-card__img" role="img" aria-label="Doctor and patient in consultation">
+              <img src="/images/service_exam_premium.png" alt="Patient examination environment" class="w-full h-full object-cover">
+            </div>
             <div class="blog-card__body">
               <p class="blog-card__tag">New Patients</p>
               <h3><a href="/blog/first-chiropractic-visit/" style="color:inherit; text-decoration:none;">What Actually Happens at a First Chiropractic Appointment</a></h3>
@@ -95,8 +184,10 @@
             </div>
           </article>
 
-          <article class="blog-card">
-            <div class="blog-card__img" role="img" aria-label="Person with hand on neck, working at desk">BLOG-03-TENSION.webp</div>
+          <article class="blog-card depth-float">
+            <div class="blog-card__img" role="img" aria-label="Person with hand on neck, working at desk">
+              <img src="/images/service_massage_premium.png" alt="Clinical tension release" class="w-full h-full object-cover">
+            </div>
             <div class="blog-card__body">
               <p class="blog-card__tag">Wellness Tips</p>
               <h3><a href="/blog/when-tension-needs-attention/" style="color:inherit; text-decoration:none;">When Recurring Tension Becomes Something Worth Getting Checked</a></h3>
@@ -106,8 +197,10 @@
             </div>
           </article>
 
-          <article class="blog-card">
-            <div class="blog-card__img" role="img" aria-label="Active adult stretching outdoors">BLOG-04-RECOVERY.webp</div>
+          <article class="blog-card depth-float">
+            <div class="blog-card__img" role="img" aria-label="Active adult stretching outdoors">
+              <img src="/images/service_sports_premium.png" alt="Sports recovery care" class="w-full h-full object-cover">
+            </div>
             <div class="blog-card__body">
               <p class="blog-card__tag">Active Adults</p>
               <h3><a href="/blog/recovery-habits-active-adults/" style="color:inherit; text-decoration:none;">Simple Recovery Habits for Active Adults</a></h3>
@@ -134,46 +227,98 @@
 
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <p class="footer-brand__name">Lakeview Spine &amp; Wellness</p>
-          <p class="footer-brand__tagline">Chiropractic and wellness care in Grand Rapids, MI — with a calm, modern patient experience and easy online booking.</p>
-          <div class="footer-brand__contact">
-            <a href="tel:6165550192">(616) 555-0192</a>
-            <a href="mailto:hello@lakeviewspinewellness.com">hello@lakeviewspinewellness.com</a>
-          </div>
+<footer class="w-full bg-[#1a1c1b] text-white pt-24 pb-12 font-['Plus_Jakarta_Sans']">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+            <div class="space-y-6">
+                <a class="text-xl font-extrabold tracking-tighter text-[#b8edde] hover:opacity-80 transition-opacity block" href="/">
+                    Lakeview Spine & Wellness
+                </a>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    A restorative studio experience in Grand Rapids. Specializing in unhurried, evidence-based chiropractic care focused on long-term wellness.
+                </p>
+                <div class="flex gap-4 pt-2">
+                    <a class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-[#316357] hover:border-[#316357] transition-all group" href="#">
+                         <span class="material-symbols-outlined text-sm text-gray-400 group-hover:text-white">share</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-[#316357] hover:border-[#316357] transition-all group" href="#">
+                         <span class="material-symbols-outlined text-sm text-gray-400 group-hover:text-white">alternate_email</span>
+                    </a>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-emerald-400/80">Services</h4>
+                <nav class="flex flex-col gap-4">
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Chiropractic Adjustments</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Sports Recovery</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Prenatal Care</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Massage Therapy</a>
+                </nav>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-emerald-400/80">Practice</h4>
+                <nav class="flex flex-col gap-4">
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/about/">About the Clinic</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/new-patients/">New Patients</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/insurance/">Insurance Info</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/blog/">Clinical Notes</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/faq/">FAQ</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/new-patient-forms/">Patient Forms</a>
+                </nav>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-emerald-400/80">Get in Touch</h4>
+                <div class="space-y-4 text-sm">
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-[#b8edde] text-lg">location_on</span>
+                        <p class="text-gray-400">123 Lakeview Drive SE<br/>Grand Rapids, MI 49506</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-[#b8edde] text-lg">call</span>
+                        <a class="text-gray-400 hover:text-white transition-colors" href="tel:6165550192">(616) 555-0192</a>
+                    </div>
+                    <a class="inline-flex items-center justify-center bg-[#316357] text-white px-6 py-3 rounded-sm text-sm font-semibold hover:bg-[#4a7c6f] transition-all w-full mt-4" href="/book/">
+                        Book Your Visit
+                    </a>
+                </div>
+            </div>
         </div>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <div class="footer-nav__col">
-            <p class="footer-nav__col-title">Services</p>
-            <ul>
-              <li><a href="/services/">All Services</a></li>
-              <li><a href="/new-patients/">New Patients</a></li>
-              <li><a href="/packages/">Packages</a></li>
-            </ul>
-          </div>
-          <div class="footer-nav__col">
-            <p class="footer-nav__col-title">Information</p>
-            <ul>
-              <li><a href="/about/">About</a></li>
-              <li><a href="/faq/">FAQ</a></li>
-              <li><a href="/contact/">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-      <div class="footer-bottom">
-        <p class="footer-disclaimer">Content on this site is provided for general informational purposes only and is not medical advice. Individual needs and outcomes vary. Results are not guaranteed. Please contact the clinic directly to discuss your specific situation with a licensed provider.</p>
-        <div class="footer-legal">
-          <p class="footer-legal__copy">&copy; 2026 Lakeview Spine &amp; Wellness. All rights reserved.</p>
-          <a href="/privacy/" class="footer-legal__link">Privacy Policy</a>
+        <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-gray-500 text-xs">
+                © 2026 Lakeview Spine & Wellness. All rights reserved.
+            </p>
+            <div class="flex gap-8 text-xs">
+                <a class="text-gray-500 hover:text-white transition-colors" href="/privacy/">Privacy Policy</a>
+                <a class="text-gray-500 hover:text-white transition-colors" href="/privacy/">Terms of Service</a>
+                <a class="text-gray-500 hover:text-white transition-colors" href="/contact/">Accessibility</a>
+            </div>
         </div>
+    </div>
+</footer>
+  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-menu__header">
+      <a href="/" class="header-logo">Lakeview <span>Spine & Wellness</span></a>
+      <button class="mobile-menu__close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu__body">
+      <div class="mobile-menu__cta"><a href="/book/" class="btn btn--primary btn--lg">Book Online →</a></div>
+      <div class="mobile-menu__divider"></div>
+      <nav class="mobile-menu__links">
+        <a href="/services/">Services</a>
+        <a href="/new-patients/">New Patients</a>
+        <a href="/about/">About</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <div class="mobile-menu__contact">
+        <a href="tel:6165550192">(616) 555-0192</a>
+        <a href="mailto:hello@lakeviewspinewellness.com">hello@lakeviewspinewellness.com</a>
+        <p class="mobile-menu__hours">Mon–Fri: 8am–6pm (Wed from 10am)<br>Sat: 9am–1pm · Sun: Closed</p>
       </div>
     </div>
-  </footer>
-
-  <script src="/js/main.js"></script>
+  </div>
+<script src="/js/main.js"></script>
 </body>
 </html>

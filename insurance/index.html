@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Insurance &amp; Payment — Lakeview Spine &amp; Wellness, Grand Rapids MI</title>
   <meta name="description" content="Insurance and payment options at Lakeview Spine &amp; Wellness. We accept a range of insurance plans, self-pay, HSA, and FSA in Grand Rapids, MI.">
@@ -31,51 +32,32 @@
 </head>
 <body>
 
-  <header class="site-header" role="banner">
+  <nav class="site-header">
     <div class="header-inner">
-      <a href="/" class="header-logo">Lakeview <span>Spine &amp; Wellness</span></a>
-      <nav class="header-nav" aria-label="Main navigation">
-        <div class="header-nav__links">
-          <a href="/services/">Services</a>
-          <a href="/new-patients/">New Patients</a>
-          <a href="/about/">About</a>
-          <a href="/blog/">Blog</a>
-          <a href="/contact/">Contact</a>
-        </div>
-        <a href="/book/" class="btn btn--primary">Book Online</a>
-      </nav>
-      <div class="header-mobile-controls">
-        <a href="tel:6165550192" class="header-call-btn" aria-label="Call us">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .99h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <a class="header-logo" href="/">
+            Lakeview <span>Spine & Wellness</span>
         </a>
-        <button class="header-menu-btn" aria-label="Open menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        </button>
-      </div>
+        <div class="hidden md:flex items-center gap-12">
+            <nav class="header-nav__links">
+                <a href="/services/">Services</a>
+                <a href="/new-patients/">New Patients</a>
+                <a href="/about/">About</a>
+                <a href="/blog/">Blog</a>
+                <a href="/contact/">Contact</a>
+            </nav>
+            <a class="btn btn--primary" href="/book/">Book Online</a>
+        </div>
+        <div class="header-mobile-controls">
+            <a href="tel:6165550192" class="header-call-btn">
+                <span class="material-symbols-outlined">call</span>
+            </a>
+            <button class="header-menu-btn" aria-label="Open menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
     </div>
-  </header>
-
-  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
-    <div class="mobile-menu__header">
-      <a href="/" class="header-logo">Lakeview <span>Spine &amp; Wellness</span></a>
-      <button class="mobile-menu__close" aria-label="Close menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-    </div>
-    <div class="mobile-menu__body">
-      <div class="mobile-menu__cta"><a href="/book/" class="btn btn--primary btn--lg">Book Online →</a></div>
-      <div class="mobile-menu__divider"></div>
-      <nav class="mobile-menu__links">
-        <a href="/services/">Services</a><a href="/new-patients/">New Patients</a><a href="/about/">About</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a>
-      </nav>
-      <div class="mobile-menu__contact">
-        <a href="tel:6165550192">(616) 555-0192</a>
-        <p class="mobile-menu__hours">Mon–Fri: 8am–6pm · Sat: 9am–1pm</p>
-      </div>
-    </div>
-  </div>
-
-  <main id="main-content">
+</nav>
+<main id="main-content">
 
     <div class="page-header">
       <div class="container--text">
@@ -163,38 +145,98 @@
 
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <p class="footer-brand__name">Lakeview Spine &amp; Wellness</p>
-          <p class="footer-brand__tagline">Chiropractic and wellness care in Grand Rapids, MI.</p>
-          <div class="footer-brand__contact">
-            <a href="tel:6165550192">(616) 555-0192</a>
-            <a href="mailto:hello@lakeviewspinewellness.com">hello@lakeviewspinewellness.com</a>
-          </div>
+  <footer class="w-full bg-[#1a1c1b] text-white pt-24 pb-12 font-['Plus_Jakarta_Sans']">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+            <div class="space-y-6">
+                <a class="text-xl font-extrabold tracking-tighter text-[#b8edde] hover:opacity-80 transition-opacity block" href="/">
+                    Lakeview Spine & Wellness
+                </a>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    A restorative studio experience in Grand Rapids. Specializing in unhurried, evidence-based chiropractic care focused on long-term wellness.
+                </p>
+                <div class="flex gap-4 pt-2">
+                    <a class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-[#316357] hover:border-[#316357] transition-all group" href="#">
+                         <span class="material-symbols-outlined text-sm text-gray-400 group-hover:text-white">share</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-[#316357] hover:border-[#316357] transition-all group" href="#">
+                         <span class="material-symbols-outlined text-sm text-gray-400 group-hover:text-white">alternate_email</span>
+                    </a>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-emerald-400/80">Services</h4>
+                <nav class="flex flex-col gap-4">
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Chiropractic Adjustments</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Sports Recovery</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Prenatal Care</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Massage Therapy</a>
+                </nav>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-emerald-400/80">Practice</h4>
+                <nav class="flex flex-col gap-4">
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/about/">About the Clinic</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/new-patients/">New Patients</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/insurance/">Insurance Info</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/blog/">Clinical Notes</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/faq/">FAQ</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/new-patient-forms/">Patient Forms</a>
+                </nav>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-emerald-400/80">Get in Touch</h4>
+                <div class="space-y-4 text-sm">
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-[#b8edde] text-lg">location_on</span>
+                        <p class="text-gray-400">123 Lakeview Drive SE<br/>Grand Rapids, MI 49506</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-[#b8edde] text-lg">call</span>
+                        <a class="text-gray-400 hover:text-white transition-colors" href="tel:6165550192">(616) 555-0192</a>
+                    </div>
+                    <a class="inline-flex items-center justify-center bg-[#316357] text-white px-6 py-3 rounded-sm text-sm font-semibold hover:bg-[#4a7c6f] transition-all w-full mt-4" href="/book/">
+                        Book Your Visit
+                    </a>
+                </div>
+            </div>
         </div>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <div class="footer-nav__col">
-            <p class="footer-nav__col-title">Services</p>
-            <ul><li><a href="/services/">All Services</a></li><li><a href="/new-patients/">New Patients</a></li><li><a href="/packages/">Packages</a></li></ul>
-          </div>
-          <div class="footer-nav__col">
-            <p class="footer-nav__col-title">Information</p>
-            <ul><li><a href="/about/">About</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/contact/">Contact</a></li></ul>
-          </div>
-        </nav>
-      </div>
-      <div class="footer-bottom">
-        <p class="footer-disclaimer">Content on this site is provided for general informational purposes only and is not medical advice. Individual needs and outcomes vary. Please contact the clinic to discuss your specific insurance coverage.</p>
-        <div class="footer-legal">
-          <p class="footer-legal__copy">&copy; 2026 Lakeview Spine &amp; Wellness. All rights reserved.</p>
-          <a href="/privacy/" class="footer-legal__link">Privacy Policy</a>
+        <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-gray-500 text-xs">
+                © 2026 Lakeview Spine & Wellness. All rights reserved.
+            </p>
+            <div class="flex gap-8 text-xs">
+                <a class="text-gray-500 hover:text-white transition-colors" href="/privacy/">Privacy Policy</a>
+                <a class="text-gray-500 hover:text-white transition-colors" href="/privacy/">Terms of Service</a>
+                <a class="text-gray-500 hover:text-white transition-colors" href="/contact/">Accessibility</a>
+            </div>
         </div>
+    </div>
+</footer>
+  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-menu__header">
+      <a href="/" class="header-logo">Lakeview <span>Spine & Wellness</span></a>
+      <button class="mobile-menu__close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu__body">
+      <div class="mobile-menu__cta"><a href="/book/" class="btn btn--primary btn--lg">Book Online →</a></div>
+      <div class="mobile-menu__divider"></div>
+      <nav class="mobile-menu__links">
+        <a href="/services/">Services</a>
+        <a href="/new-patients/">New Patients</a>
+        <a href="/about/">About</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <div class="mobile-menu__contact">
+        <a href="tel:6165550192">(616) 555-0192</a>
+        <a href="mailto:hello@lakeviewspinewellness.com">hello@lakeviewspinewellness.com</a>
+        <p class="mobile-menu__hours">Mon–Fri: 8am–6pm (Wed from 10am)<br>Sat: 9am–1pm · Sun: Closed</p>
       </div>
     </div>
-  </footer>
-
-  <script src="/js/main.js"></script>
+  </div>
+<script src="/js/main.js"></script>
 </body>
 </html>

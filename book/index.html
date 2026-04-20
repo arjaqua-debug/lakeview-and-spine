@@ -2,12 +2,14 @@
 
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Book Appointment - Lakeview Spine &amp; Wellness</title>
+<title>Book an Appointment — Lakeview Spine &amp; Wellness, Grand Rapids MI</title>
+<meta name="description" content="Book a chiropractic appointment online at Lakeview Spine &amp; Wellness in Grand Rapids, MI. Same-week appointments available. New and returning patients welcome.">
+<link rel="canonical" href="https://lakeviewspinewellness.com/book/">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -89,35 +91,409 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
     </style>
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- GSAP — High-End Motion -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body class="bg-background text-on-surface min-h-screen flex flex-col antialiased">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 shadow-[0_8px_32px_rgba(26,28,27,0.04)] bg-emerald-900/80 backdrop-blur-xl dark:bg-emerald-950/80 font-['Plus_Jakarta_Sans'] tracking-tight antialiased flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
-<a class="text-lg font-bold tracking-tighter text-white" href="/">Lakeview Spine &amp; Wellness</a>
-<div class="hidden md:flex space-x-8">
-<a class="text-emerald-100/80 hover:text-white transition-colors" href="/services/">Treatments</a>
-<a class="text-emerald-100/80 hover:text-white transition-colors" href="/about/">Our Team</a>
-<a class="text-white font-semibold border-b border-emerald-200/30 pb-1" href="/new-patients/">New Patients</a>
-<a class="text-emerald-100/80 hover:text-white transition-colors" href="/blog/">Journal</a>
-</div>
-<a class="hover:bg-white/10 rounded-lg transition-all duration-300 scale-95 active:scale-100 px-4 py-2 text-white dark:text-emerald-50" href="/book/">Book Online</a>
+<nav class="site-header">
+    <div class="header-inner">
+        <a class="header-logo" href="/">
+            Lakeview <span>Spine & Wellness</span>
+        </a>
+        <div class="hidden md:flex items-center gap-12">
+            <nav class="header-nav__links">
+                <a href="/services/">Services</a>
+                <a href="/new-patients/">New Patients</a>
+                <a href="/about/">About</a>
+                <a href="/blog/">Blog</a>
+                <a href="/contact/">Contact</a>
+            </nav>
+            <a class="btn btn--primary" href="/book/">Book Online</a>
+        </div>
+        <div class="header-mobile-controls">
+            <a href="tel:6165550192" class="header-call-btn">
+                <span class="material-symbols-outlined">call</span>
+            </a>
+            <button class="header-menu-btn" aria-label="Open menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </div>
 </nav>
-<!-- Main Content Canvas -->
 <main class="flex-grow pt-32">
 <!-- Page Header -->
-<section class="bg-background py-16 px-8 text-center max-w-3xl mx-auto">
-<h1 class="text-[40px] font-semibold text-on-surface leading-tight tracking-tight mb-4">Schedule your visit.</h1>
-<p class="text-[17px] text-secondary leading-relaxed max-w-[560px] mx-auto">
-                Whether you are beginning a new restorative journey or continuing your prescribed treatment, select the appropriate option below to find a time that fits your unhurried schedule.
-            </p>
+<section class="relative py-24 px-8 text-center overflow-hidden min-h-[50vh] flex items-center justify-center group">
+    <div class="absolute inset-0 z-0">
+        <img src="/images/about_clinic_reception.png" alt="Clinical Consult Area" class="w-full h-full object-cover transition-transform duration-[20000ms] scale-110 group-hover:scale-100">
+        <div class="absolute inset-0 bg-white/40 backdrop-blur-[1px]"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/40"></div>
+    </div>
+    <div class="max-w-3xl mx-auto relative z-10">
+        <h1 class="text-[40px] md:text-[52px] font-bold text-on-surface leading-tight tracking-tight mb-4 [text-shadow:_0_1px_20px_rgb(255_255_255_/_90%)]">Schedule your visit.</h1>
+        <p class="text-[18px] md:text-[20px] text-on-surface/90 font-medium leading-relaxed max-w-[560px] mx-auto [text-shadow:_0_1px_10px_rgb(255_255_255_/_95%)]">
+            New patient or returning — pick the appointment type that fits and choose a time that works for you. No phone call required.
+        </p>
+    </div>
 </section>
-<!-- Booking Widget Section -->
-<section class="bg-background px-8 pb-24">
-<div class="max-w-[900px] h-[600px] mx-auto bg-surface-container-lowest rounded-lg border-none shadow-[0_4px_32px_rgba(26,28,27,0.04)] flex items-center justify-center p-12">
-<!-- Placeholder for Acuity Embed -->
-<p class="text-outline uppercase tracking-widest text-sm font-semibold">[ Scheduling Widget Loading ]</p>
+<!-- Contact Options -->
+<section class="bg-surface-container-low py-10 px-8 border-b border-outline-variant/10">
+<div class="max-w-[900px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+  <div class="flex items-center gap-4">
+    <span class="material-symbols-outlined text-primary text-2xl">call</span>
+    <div>
+      <p class="text-xs uppercase tracking-widest font-semibold text-secondary mb-1">Prefer to call?</p>
+      <a href="tel:6165550192" class="text-xl font-semibold text-primary hover:text-primary-container transition-colors">(616) 555-0192</a>
+      <p class="text-xs text-outline mt-0.5">Mon–Fri 8am–6pm (Wed from 10am) · Sat 9am–1pm</p>
+    </div>
+  </div>
+  <div class="hidden sm:block h-10 w-px bg-outline-variant/30"></div>
+  <p class="text-secondary text-sm text-center sm:text-left max-w-xs">Our studio coordinator can help you pick the right appointment type and find a time that works.</p>
 </div>
 </section>
+<!-- Booking Widget Section -->
+<section class="bg-background px-4 sm:px-8 pb-24 pt-16">
+<div class="max-w-[900px] mx-auto bg-surface-container-lowest rounded-xl shadow-[0_4px_40px_rgba(26,28,27,0.07)] overflow-hidden border border-outline-variant/10">
+
+  <!-- Widget Header -->
+  <div class="bg-primary px-8 py-5 flex items-center justify-between">
+    <div>
+      <p class="text-primary-fixed text-xs font-semibold uppercase tracking-widest mb-0.5">Lakeview Spine &amp; Wellness</p>
+      <p class="text-white font-semibold text-lg leading-tight" id="widget-step-label">Select appointment type</p>
+    </div>
+    <!-- Step dots -->
+    <div class="flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-white" id="dot-1"></span>
+      <span class="w-2 h-2 rounded-full bg-white/30" id="dot-2"></span>
+      <span class="w-2 h-2 rounded-full bg-white/30" id="dot-3"></span>
+    </div>
+  </div>
+
+  <!-- STEP 1: Appointment Type -->
+  <div id="step-1" class="p-6 sm:p-8">
+    <p class="text-secondary text-sm mb-6">All prices are self-pay rates. Insurance coverage varies by plan.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="appt-list">
+
+      <button onclick="selectAppt(this)" data-name="New Patient Exam" data-duration="45 min" data-price="$95"
+        class="appt-btn text-left p-5 rounded-lg border-2 border-outline-variant/20 bg-background hover:border-primary hover:bg-primary/5 transition-all group">
+        <div class="flex justify-between items-start mb-2">
+          <span class="font-semibold text-on-surface text-[15px] group-hover:text-primary transition-colors">New Patient Exam</span>
+          <span class="text-primary font-bold text-sm ml-2 shrink-0">$95</span>
+        </div>
+        <p class="text-secondary text-xs leading-relaxed">Full assessment, clear findings, honest recommendation.</p>
+        <span class="mt-3 inline-block text-xs text-outline font-medium">45 min</span>
+      </button>
+
+      <button onclick="selectAppt(this)" data-name="Chiropractic Adjustment" data-duration="20 min" data-price="$55"
+        class="appt-btn text-left p-5 rounded-lg border-2 border-outline-variant/20 bg-background hover:border-primary hover:bg-primary/5 transition-all group">
+        <div class="flex justify-between items-start mb-2">
+          <span class="font-semibold text-on-surface text-[15px] group-hover:text-primary transition-colors">Chiropractic Adjustment</span>
+          <span class="text-primary font-bold text-sm ml-2 shrink-0">$55</span>
+        </div>
+        <p class="text-secondary text-xs leading-relaxed">Targeted, efficient care for established patients.</p>
+        <span class="mt-3 inline-block text-xs text-outline font-medium">20 min</span>
+      </button>
+
+      <button onclick="selectAppt(this)" data-name="Sports Recovery Visit" data-duration="30 min" data-price="$75"
+        class="appt-btn text-left p-5 rounded-lg border-2 border-outline-variant/20 bg-background hover:border-primary hover:bg-primary/5 transition-all group">
+        <div class="flex justify-between items-start mb-2">
+          <span class="font-semibold text-on-surface text-[15px] group-hover:text-primary transition-colors">Sports Recovery Visit</span>
+          <span class="text-primary font-bold text-sm ml-2 shrink-0">$75</span>
+        </div>
+        <p class="text-secondary text-xs leading-relaxed">Soft tissue work and adjustment for active adults.</p>
+        <span class="mt-3 inline-block text-xs text-outline font-medium">30 min</span>
+      </button>
+
+      <button onclick="selectAppt(this)" data-name="Prenatal Care Visit" data-duration="30 min" data-price="$65"
+        class="appt-btn text-left p-5 rounded-lg border-2 border-outline-variant/20 bg-background hover:border-primary hover:bg-primary/5 transition-all group">
+        <div class="flex justify-between items-start mb-2">
+          <span class="font-semibold text-on-surface text-[15px] group-hover:text-primary transition-colors">Prenatal Care Visit</span>
+          <span class="text-primary font-bold text-sm ml-2 shrink-0">$65</span>
+        </div>
+        <p class="text-secondary text-xs leading-relaxed">Pregnancy-adapted care, any trimester.</p>
+        <span class="mt-3 inline-block text-xs text-outline font-medium">30 min</span>
+      </button>
+
+      <button onclick="selectAppt(this)" data-name="Posture & Mobility Assessment" data-duration="30 min" data-price="$65"
+        class="appt-btn text-left p-5 rounded-lg border-2 border-outline-variant/20 bg-background hover:border-primary hover:bg-primary/5 transition-all group">
+        <div class="flex justify-between items-start mb-2">
+          <span class="font-semibold text-on-surface text-[15px] group-hover:text-primary transition-colors">Posture &amp; Mobility Assessment</span>
+          <span class="text-primary font-bold text-sm ml-2 shrink-0">$65</span>
+        </div>
+        <p class="text-secondary text-xs leading-relaxed">Postural analysis and mobility screen with recommendations.</p>
+        <span class="mt-3 inline-block text-xs text-outline font-medium">30 min</span>
+      </button>
+
+      <button onclick="selectAppt(this)" data-name="Massage Therapy" data-duration="30 min" data-price="$50"
+        class="appt-btn text-left p-5 rounded-lg border-2 border-outline-variant/20 bg-background hover:border-primary hover:bg-primary/5 transition-all group">
+        <div class="flex justify-between items-start mb-2">
+          <span class="font-semibold text-on-surface text-[15px] group-hover:text-primary transition-colors">Massage Therapy</span>
+          <span class="text-primary font-bold text-sm ml-2 shrink-0">$50</span>
+        </div>
+        <p class="text-secondary text-xs leading-relaxed">Focused therapeutic massage, standalone session.</p>
+        <span class="mt-3 inline-block text-xs text-outline font-medium">30 min</span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- STEP 2: Date & Time -->
+  <div id="step-2" class="p-6 sm:p-8 hidden">
+    <!-- Selected appt summary -->
+    <div class="flex items-center justify-between mb-6 pb-5 border-b border-outline-variant/10">
+      <div>
+        <p id="s2-appt-name" class="font-semibold text-on-surface text-[15px]">New Patient Exam</p>
+        <p id="s2-appt-meta" class="text-secondary text-xs mt-0.5">45 min · $95</p>
+      </div>
+      <button onclick="goStep(1)" class="text-xs text-primary font-medium hover:underline">Change</button>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Mini Calendar -->
+      <div>
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="font-semibold text-on-surface text-sm">April 2026</h3>
+          <div class="flex gap-1">
+            <button class="w-7 h-7 rounded flex items-center justify-center text-secondary hover:bg-surface-container transition-colors">
+              <span class="material-symbols-outlined text-base">chevron_left</span>
+            </button>
+            <button class="w-7 h-7 rounded flex items-center justify-center text-secondary hover:bg-surface-container transition-colors">
+              <span class="material-symbols-outlined text-base">chevron_right</span>
+            </button>
+          </div>
+        </div>
+        <div class="grid grid-cols-7 gap-0.5 text-center">
+          <!-- Day headers -->
+          <span class="text-[10px] font-semibold text-outline uppercase py-1">Su</span>
+          <span class="text-[10px] font-semibold text-outline uppercase py-1">Mo</span>
+          <span class="text-[10px] font-semibold text-outline uppercase py-1">Tu</span>
+          <span class="text-[10px] font-semibold text-outline uppercase py-1">We</span>
+          <span class="text-[10px] font-semibold text-outline uppercase py-1">Th</span>
+          <span class="text-[10px] font-semibold text-outline uppercase py-1">Fr</span>
+          <span class="text-[10px] font-semibold text-outline uppercase py-1">Sa</span>
+          <!-- Week 1 padding -->
+          <span></span><span></span>
+          <!-- Days -->
+          <button class="cal-day unavailable" disabled>1</button>
+          <button class="cal-day unavailable" disabled>2</button>
+          <button class="cal-day unavailable" disabled>3</button>
+          <button class="cal-day unavailable" disabled>4</button>
+          <button class="cal-day unavailable" disabled>5</button>
+          <button class="cal-day" onclick="selectDay(this,'Mon Apr 6')">6</button>
+          <button class="cal-day" onclick="selectDay(this,'Tue Apr 7')">7</button>
+          <button class="cal-day" onclick="selectDay(this,'Wed Apr 8')">8</button>
+          <button class="cal-day" onclick="selectDay(this,'Thu Apr 9')">9</button>
+          <button class="cal-day" onclick="selectDay(this,'Fri Apr 10')">10</button>
+          <button class="cal-day unavailable" disabled>11</button>
+          <button class="cal-day" onclick="selectDay(this,'Mon Apr 13')">12</button>
+          <button class="cal-day" onclick="selectDay(this,'Mon Apr 13')">13</button>
+          <button class="cal-day" onclick="selectDay(this,'Tue Apr 14')">14</button>
+          <button class="cal-day" onclick="selectDay(this,'Wed Apr 15')">15</button>
+          <button class="cal-day" onclick="selectDay(this,'Thu Apr 16')">16</button>
+          <button class="cal-day" onclick="selectDay(this,'Fri Apr 17')">17</button>
+          <button class="cal-day unavailable" disabled>18</button>
+          <button class="cal-day" onclick="selectDay(this,'Mon Apr 20')">19</button>
+          <button class="cal-day today" onclick="selectDay(this,'Mon Apr 20')">20</button>
+          <button class="cal-day" onclick="selectDay(this,'Tue Apr 21')">21</button>
+          <button class="cal-day" onclick="selectDay(this,'Wed Apr 22')">22</button>
+          <button class="cal-day" onclick="selectDay(this,'Thu Apr 23')">23</button>
+          <button class="cal-day" onclick="selectDay(this,'Fri Apr 24')">24</button>
+          <button class="cal-day unavailable" disabled>25</button>
+          <button class="cal-day" onclick="selectDay(this,'Mon Apr 27')">26</button>
+          <button class="cal-day" onclick="selectDay(this,'Mon Apr 27')">27</button>
+          <button class="cal-day" onclick="selectDay(this,'Tue Apr 28')">28</button>
+          <button class="cal-day" onclick="selectDay(this,'Wed Apr 29')">29</button>
+          <button class="cal-day" onclick="selectDay(this,'Thu Apr 30')">30</button>
+        </div>
+        <div class="flex items-center gap-4 mt-4 text-[11px] text-secondary">
+          <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-primary/80 inline-block"></span>Available</span>
+          <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-surface-container-high inline-block"></span>Unavailable</span>
+        </div>
+      </div>
+
+      <!-- Time Slots -->
+      <div>
+        <h3 class="font-semibold text-on-surface text-sm mb-4" id="time-slot-heading">Select a date to see times</h3>
+        <div id="time-slots" class="grid grid-cols-2 gap-2 hidden">
+          <button onclick="selectTime(this,'8:00 AM')" class="time-btn">8:00 AM</button>
+          <button onclick="selectTime(this,'9:00 AM')" class="time-btn">9:00 AM</button>
+          <button onclick="selectTime(this,'10:00 AM')" class="time-btn unavailable-time" disabled>10:00 AM</button>
+          <button onclick="selectTime(this,'11:00 AM')" class="time-btn">11:00 AM</button>
+          <button onclick="selectTime(this,'1:00 PM')" class="time-btn">1:00 PM</button>
+          <button onclick="selectTime(this,'2:00 PM')" class="time-btn">2:00 PM</button>
+          <button onclick="selectTime(this,'3:00 PM')" class="time-btn unavailable-time" disabled>3:00 PM</button>
+          <button onclick="selectTime(this,'4:00 PM')" class="time-btn">4:00 PM</button>
+          <button onclick="selectTime(this,'5:00 PM')" class="time-btn">5:00 PM</button>
+        </div>
+        <div id="time-slots-empty" class="flex flex-col items-center justify-center py-10 text-secondary text-sm gap-2">
+          <span class="material-symbols-outlined text-outline text-3xl">calendar_month</span>
+          <span>Pick a date on the left</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Next button (hidden until time selected) -->
+    <div id="step2-next" class="hidden mt-6 pt-5 border-t border-outline-variant/10 flex justify-end">
+      <button onclick="goStep3()" class="btn btn--primary px-8">Continue →</button>
+    </div>
+  </div>
+
+  <!-- STEP 3: Confirm -->
+  <div id="step-3" class="p-6 sm:p-8 hidden">
+    <div class="max-w-md mx-auto">
+      <h3 class="font-semibold text-on-surface text-lg mb-6">Your details</h3>
+      <div class="space-y-4">
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-medium text-on-surface-variant mb-1.5">First name</label>
+            <input type="text" placeholder="Jane" class="w-full bg-surface-container-high rounded p-3 text-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-on-surface-variant mb-1.5">Last name</label>
+            <input type="text" placeholder="Doe" class="w-full bg-surface-container-high rounded p-3 text-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all">
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-on-surface-variant mb-1.5">Email</label>
+          <input type="email" placeholder="jane@example.com" class="w-full bg-surface-container-high rounded p-3 text-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-on-surface-variant mb-1.5">Phone</label>
+          <input type="tel" placeholder="(555) 000-0000" class="w-full bg-surface-container-high rounded p-3 text-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all">
+        </div>
+      </div>
+
+      <!-- Booking summary -->
+      <div class="mt-6 bg-surface-container-low rounded-lg p-5 space-y-2 text-sm">
+        <p class="font-semibold text-on-surface text-xs uppercase tracking-wider text-outline mb-3">Appointment Summary</p>
+        <div class="flex justify-between"><span class="text-secondary">Type</span><span id="s3-type" class="font-medium text-on-surface">—</span></div>
+        <div class="flex justify-between"><span class="text-secondary">Date</span><span id="s3-date" class="font-medium text-on-surface">—</span></div>
+        <div class="flex justify-between"><span class="text-secondary">Time</span><span id="s3-time" class="font-medium text-on-surface">—</span></div>
+        <div class="flex justify-between border-t border-outline-variant/10 pt-2 mt-2"><span class="text-secondary">Rate</span><span id="s3-price" class="font-bold text-primary">—</span></div>
+      </div>
+
+      <div class="flex items-center justify-between mt-6 gap-4">
+        <button onclick="goStep(2)" class="text-sm text-secondary hover:text-on-surface font-medium">← Back</button>
+        <button onclick="confirmBooking()" class="btn btn--primary flex-1">Confirm Booking</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 4: Confirmed -->
+  <div id="step-confirmed" class="p-8 sm:p-12 hidden text-center">
+    <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center mx-auto mb-6">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" class="w-8 h-8"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h3 class="text-2xl font-bold text-on-surface mb-2">You're all set.</h3>
+    <p class="text-secondary mb-1">A confirmation has been sent to your email.</p>
+    <div id="confirm-summary" class="mt-6 inline-block text-left bg-surface-container-low rounded-lg px-6 py-4 text-sm space-y-1.5 min-w-[240px]">
+      <p><span class="text-secondary">Type: </span><span id="c-type" class="font-medium text-on-surface"></span></p>
+      <p><span class="text-secondary">Date: </span><span id="c-date" class="font-medium text-on-surface"></span></p>
+      <p><span class="text-secondary">Time: </span><span id="c-time" class="font-medium text-on-surface"></span></p>
+    </div>
+    <div class="mt-8">
+      <button onclick="resetWidget()" class="text-sm text-primary font-medium hover:underline">Book another appointment</button>
+    </div>
+  </div>
+
+</div><!-- end widget -->
+</section>
+
+<style>
+  .cal-day {
+    width: 100%; aspect-ratio: 1; border-radius: 6px;
+    font-size: 13px; font-weight: 500; color: #1a1c1b;
+    background: transparent; border: none; cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .cal-day:hover { background: #316357; color: white; }
+  .cal-day.unavailable { color: #c0c8c4; cursor: not-allowed; background: transparent; }
+  .cal-day.unavailable:hover { background: transparent; color: #c0c8c4; }
+  .cal-day.today { font-weight: 700; border: 1.5px solid #316357; }
+  .cal-day.selected { background: #316357; color: white; }
+  .time-btn {
+    padding: 10px 6px; border-radius: 8px; font-size: 13px; font-weight: 500;
+    border: 1.5px solid #e2e3e1; background: white; color: #1a1c1b;
+    cursor: pointer; transition: all 0.15s;
+  }
+  .time-btn:hover { border-color: #316357; background: #316357; color: white; }
+  .time-btn.selected { background: #316357; border-color: #316357; color: white; }
+  .unavailable-time { color: #c0c8c4; border-color: #e8e8e6; cursor: not-allowed; background: #f4f4f2; }
+  .unavailable-time:hover { background: #f4f4f2; color: #c0c8c4; border-color: #e8e8e6; }
+  .appt-btn.selected { border-color: #316357; background: #316357/5; }
+</style>
+
+<script>
+  var booking = { appt: '', duration: '', price: '', day: '', time: '' };
+
+  function goStep(n) {
+    [1,2,3].forEach(function(i) {
+      document.getElementById('step-' + i).classList.add('hidden');
+      document.getElementById('dot-' + i).className = 'w-2 h-2 rounded-full bg-white/30';
+    });
+    document.getElementById('step-confirmed').classList.add('hidden');
+    document.getElementById('step-' + n).classList.remove('hidden');
+    document.getElementById('dot-' + n).className = 'w-2 h-2 rounded-full bg-white';
+    var labels = ['Select appointment type', 'Choose a date & time', 'Confirm your booking'];
+    document.getElementById('widget-step-label').textContent = labels[n - 1];
+  }
+
+  function selectAppt(btn) {
+    document.querySelectorAll('.appt-btn').forEach(function(b) { b.classList.remove('selected', 'border-primary', 'bg-primary/5'); });
+    btn.classList.add('selected', 'border-primary');
+    booking.appt = btn.dataset.name;
+    booking.duration = btn.dataset.duration;
+    booking.price = btn.dataset.price;
+    document.getElementById('s2-appt-name').textContent = booking.appt;
+    document.getElementById('s2-appt-meta').textContent = booking.duration + ' · ' + booking.price;
+    setTimeout(function() { goStep(2); }, 180);
+  }
+
+  function selectDay(btn, label) {
+    document.querySelectorAll('.cal-day').forEach(function(b) { b.classList.remove('selected'); });
+    btn.classList.add('selected');
+    booking.day = label;
+    document.getElementById('time-slot-heading').textContent = label;
+    document.getElementById('time-slots').classList.remove('hidden');
+    document.getElementById('time-slots-empty').classList.add('hidden');
+    document.querySelectorAll('.time-btn').forEach(function(b) { b.classList.remove('selected'); });
+    document.getElementById('step2-next').classList.add('hidden');
+    booking.time = '';
+  }
+
+  function selectTime(btn, label) {
+    document.querySelectorAll('.time-btn').forEach(function(b) { b.classList.remove('selected'); });
+    btn.classList.add('selected');
+    booking.time = label;
+    document.getElementById('step2-next').classList.remove('hidden');
+  }
+
+  function goStep3() {
+    document.getElementById('s3-type').textContent = booking.appt;
+    document.getElementById('s3-date').textContent = booking.day;
+    document.getElementById('s3-time').textContent = booking.time;
+    document.getElementById('s3-price').textContent = booking.price;
+    goStep(3);
+  }
+
+  function confirmBooking() {
+    document.getElementById('c-type').textContent = booking.appt;
+    document.getElementById('c-date').textContent = booking.day;
+    document.getElementById('c-time').textContent = booking.time;
+    [1,2,3].forEach(function(i) { document.getElementById('step-' + i).classList.add('hidden'); });
+    document.getElementById('step-confirmed').classList.remove('hidden');
+    document.getElementById('widget-step-label').textContent = 'Booking confirmed';
+    [1,2,3].forEach(function(i) { document.getElementById('dot-' + i).className = 'w-2 h-2 rounded-full bg-white'; });
+  }
+
+  function resetWidget() {
+    booking = { appt: '', duration: '', price: '', day: '', time: '' };
+    goStep(1);
+  }
+</script>
 <!-- Booking Guidance Section -->
 <section class="bg-surface-container-low py-16 px-8">
 <div class="max-w-3xl mx-auto">
@@ -133,11 +509,11 @@
                             </li>
 <li class="flex items-start">
 <span class="material-symbols-outlined text-primary-container mr-3 mt-1 text-sm">circle</span>
-                                Plan for a 60-minute comprehensive assessment
+                                Plan for a 45-minute comprehensive exam
                             </li>
 <li class="flex items-start">
 <span class="material-symbols-outlined text-primary-container mr-3 mt-1 text-sm">circle</span>
-                                Intake forms will be emailed upon booking
+                                Intake form appears during online booking — no printing needed
                             </li>
 </ul>
 </div>
@@ -162,29 +538,99 @@
 </div>
 </div>
 </section>
-<!-- Phone Fallback Section -->
-<section class="bg-background py-20 px-8 text-center">
-<div class="max-w-xl mx-auto">
-<p class="text-[17px] text-secondary leading-relaxed mb-4">
-                    Prefer to speak with our studio coordinator? We are here to assist you in finding the perfect time.
-                </p>
-<a class="block text-2xl text-primary font-semibold hover:text-primary-container transition-colors mb-4" href="tel:6165550192">(616) 555-0192</a>
-<p class="text-outline text-sm uppercase tracking-widest font-semibold">
-                    Mon - Fri • 8:00 AM - 5:00 PM
-                </p>
-</div>
-</section>
 </main>
 <!-- Footer -->
-<footer class="w-full mt-24 bg-[#f4f4f2] dark:bg-stone-900 font-['Plus_Jakarta_Sans'] text-[13px] leading-relaxed max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-stone-200/10">
-<div>
-<span class="text-stone-900 dark:text-stone-100 font-bold uppercase tracking-widest block mb-4">Lakeview Spine &amp; Wellness</span>
-<p class="text-stone-600 dark:text-stone-400">© 2024 Lakeview Spine &amp; Wellness. A Restorative Studio.</p>
-</div>
-<div class="flex space-x-6 justify-start md:justify-end">
-<a class="text-stone-500 hover:text-emerald-800 dark:hover:text-emerald-200 underline decoration-emerald-200 underline-offset-4 transition-all duration-500 ease-out" href="/privacy/">Privacy</a>
-<a class="text-stone-500 hover:text-emerald-800 dark:hover:text-emerald-200 underline decoration-emerald-200 underline-offset-4 transition-all duration-500 ease-out" href="/privacy/">Terms</a>
-<a class="text-stone-500 hover:text-emerald-800 dark:hover:text-emerald-200 underline decoration-emerald-200 underline-offset-4 transition-all duration-500 ease-out" href="/contact/">Accessibility</a>
-</div>
+<footer class="w-full bg-[#1a1c1b] text-white pt-24 pb-12 font-['Plus_Jakarta_Sans']">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+            <div class="space-y-6">
+                <a class="text-xl font-extrabold tracking-tighter text-[#b8edde] hover:opacity-80 transition-opacity block" href="/">
+                    Lakeview Spine & Wellness
+                </a>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    A restorative studio experience in Grand Rapids. Specializing in unhurried, evidence-based chiropractic care focused on long-term wellness.
+                </p>
+                <div class="flex gap-4 pt-2">
+                    <a class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-[#316357] hover:border-[#316357] transition-all group" href="#">
+                         <span class="material-symbols-outlined text-sm text-gray-400 group-hover:text-white">share</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-[#316357] hover:border-[#316357] transition-all group" href="#">
+                         <span class="material-symbols-outlined text-sm text-gray-400 group-hover:text-white">alternate_email</span>
+                    </a>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-emerald-400/80">Services</h4>
+                <nav class="flex flex-col gap-4">
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Chiropractic Adjustments</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Sports Recovery</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Prenatal Care</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/services/">Massage Therapy</a>
+                </nav>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-emerald-400/80">Practice</h4>
+                <nav class="flex flex-col gap-4">
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/about/">About the Clinic</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/new-patients/">New Patients</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/insurance/">Insurance Info</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/blog/">Clinical Notes</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/faq/">FAQ</a>
+                    <a class="text-gray-400 hover:text-white text-sm transition-colors" href="/new-patient-forms/">Patient Forms</a>
+                </nav>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-emerald-400/80">Get in Touch</h4>
+                <div class="space-y-4 text-sm">
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-[#b8edde] text-lg">location_on</span>
+                        <p class="text-gray-400">123 Lakeview Drive SE<br/>Grand Rapids, MI 49506</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-[#b8edde] text-lg">call</span>
+                        <a class="text-gray-400 hover:text-white transition-colors" href="tel:6165550192">(616) 555-0192</a>
+                    </div>
+                    <a class="inline-flex items-center justify-center bg-[#316357] text-white px-6 py-3 rounded-sm text-sm font-semibold hover:bg-[#4a7c6f] transition-all w-full mt-4" href="/book/">
+                        Book Your Visit
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-gray-500 text-xs">
+                © 2026 Lakeview Spine & Wellness. All rights reserved.
+            </p>
+            <div class="flex gap-8 text-xs">
+                <a class="text-gray-500 hover:text-white transition-colors" href="/privacy/">Privacy Policy</a>
+                <a class="text-gray-500 hover:text-white transition-colors" href="/privacy/">Terms of Service</a>
+                <a class="text-gray-500 hover:text-white transition-colors" href="/contact/">Accessibility</a>
+            </div>
+        </div>
+    </div>
 </footer>
+  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-menu__header">
+      <a href="/" class="header-logo">Lakeview <span>Spine & Wellness</span></a>
+      <button class="mobile-menu__close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu__body">
+      <div class="mobile-menu__cta"><a href="/book/" class="btn btn--primary btn--lg">Book Online →</a></div>
+      <div class="mobile-menu__divider"></div>
+      <nav class="mobile-menu__links">
+        <a href="/services/">Services</a>
+        <a href="/new-patients/">New Patients</a>
+        <a href="/about/">About</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <div class="mobile-menu__contact">
+        <a href="tel:6165550192">(616) 555-0192</a>
+        <a href="mailto:hello@lakeviewspinewellness.com">hello@lakeviewspinewellness.com</a>
+        <p class="mobile-menu__hours">Mon–Fri: 8am–6pm (Wed from 10am)<br>Sat: 9am–1pm · Sun: Closed</p>
+      </div>
+    </div>
+  </div>
+<script src="/js/main.js"></script>
 </body></html>
